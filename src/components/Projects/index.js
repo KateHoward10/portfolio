@@ -1,9 +1,20 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import ComingSoon from "../ComingSoon"
 import { Container, Box, Link, Image } from "./styles"
-import projects from "../../data/projects"
 
 const Projects = React.forwardRef((props, ref) => {
+	const data = useStaticQuery(graphql`
+		query {
+			site {
+				siteMetadata: {
+					projects
+				}
+			}
+		}
+	`)
+	const projects = data.site.siteMetadata.projects
+
 	return (
 		<Container ref={ref}>
 			{projects.map((project, index) => (
