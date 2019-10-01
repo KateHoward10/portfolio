@@ -2,7 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: "Kate L. Howard’s Portfolio",
 		author: "Kate L. Howard",
-		projects: {
+		projects: [
 			{
 				name: "Music Conections Quiz",
 				code_link: "https://github.com/KateHoward10/music-connections-quiz",
@@ -51,6 +51,6 @@ module.exports = {
 				image: "water-works",
 				comingSoon: true,
 			},
-		},
+		],
 	},
 }

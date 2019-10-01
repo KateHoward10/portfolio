@@ -7,8 +7,16 @@ const Projects = React.forwardRef((props, ref) => {
 	const data = useStaticQuery(graphql`
 		query {
 			site {
-				siteMetadata: {
-					projects
+				siteMetadata {
+					projects {
+						name
+						link
+						code_link
+						extra_link
+						desc
+						image
+						comingSoon
+					}
 				}
 			}
 		}
