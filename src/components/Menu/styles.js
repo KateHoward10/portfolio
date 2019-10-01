@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components"
 
 export const Container = styled.nav`
 	width: 100%;
@@ -14,18 +14,19 @@ export const Container = styled.nav`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-`;
+	z-index: 100;
+`
 
 export const TitleContainer = styled.div`
 	padding: 0 20px;
-`;
+`
 
 export const Title = styled.a`
 	color: rgba(255, 255, 255, ${props => props.fromTop}%);
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
-`;
+`
 
 export const MenuIcon = styled.a`
 	padding: 0 20px;
@@ -33,7 +34,7 @@ export const MenuIcon = styled.a`
 	@media screen and (min-width: 500px) {
 		display: none;
 	}
-`;
+`
 
 export const Bar = styled.div`
 	height: 4px;
@@ -46,10 +47,10 @@ export const Bar = styled.div`
 		css`
 			opacity: ${props.index === 1 ? 0 : 100};
 			transform: ${props.index === 0
-				? 'rotate(-45deg) translate(-5px, 6px)'
-				: props.index === 2 && 'rotate(45deg) translate(-5px, -6px)'};
+				? "rotate(-45deg) translate(-5px, 6px)"
+				: props.index === 2 && "rotate(45deg) translate(-5px, -6px)"};
 		`}
-`;
+`
 
 export const LinkContainer = styled.div`
 	@media screen and (max-width: 500px) {
@@ -68,7 +69,7 @@ export const LinkContainer = styled.div`
 						display: none;
 				  `}
 	}
-`;
+`
 
 export const Link = styled.a`
 	padding: 0 20px;
@@ -81,4 +82,4 @@ export const Link = styled.a`
 				padding: 10px 0;
 			`}
 	}
-`;
+`
