@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 5vw;
+  padding: 5vw;
 `
 
 export const Box = styled.div`
@@ -16,15 +16,20 @@ export const Box = styled.div`
   text-align: center;
   margin: 10px;
   position: ${props => (props.comingSoon ? "relative" : "static")};
+  color: ${props => (props.darkMode ? "#fff" : "#000")};
 `
 
 export const Link = styled.a`
   text-decoration: none;
-  color: #000;
+  color: ${props => (props.darkMode ? "#fff" : "#000")};
   margin: 5px;
   vertical-align: center;
 `
 
 export const Image = styled.img`
   max-width: 20vw;
+`
+
+export const Emoji = styled.span`
+  margin-right: 5px;
 `

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import {
 	Container,
@@ -11,8 +11,7 @@ import {
 } from "./styles"
 import me from "../../images/picture-of-me.jpg"
 
-const Header = () => {
-	const [darkMode, setDarkMode] = useState(false)
+const Header = ({ darkMode, setDarkMode }) => {
 	const data = useStaticQuery(graphql`
 		query {
 			site {

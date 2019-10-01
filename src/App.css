@@ -1,8 +1,4 @@
-.app {
-	font-family: "Helvetica Neue", sans-serif;
-	min-height: 100vh;
-}
-
 body {
 	margin: 0;
+	font-family: "Helvetica Neue", sans-serif;
 }

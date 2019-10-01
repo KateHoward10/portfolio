@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ComingSoon from "../ComingSoon"
-import { Container, Box, Link, Image } from "./styles"
+import { Container, Box, Link, Image, Emoji } from "./styles"
 
-const Projects = React.forwardRef((props, ref) => {
+const Projects = React.forwardRef(({ darkMode }, ref) => {
 	const data = useStaticQuery(graphql`
 		query {
 			site {
@@ -22,9 +22,9 @@ const Projects = React.forwardRef((props, ref) => {
 	const projects = data.site.siteMetadata.projects
 
 	return (
-		<Container ref={ref}>
+		<Container ref={ref} darkMode={darkMode}>
 			{projects.map((project, index) => (
-				<Box key={index} comingSoon={project.comingSoon}>
+				<Box key={index} comingSoon={project.comingSoon} darkMode={darkMode}>
 					{project.comingSoon && <ComingSoon />}
 					<h3>{project.name}</h3>
 					{project.desc && <p>{project.desc}</p>}
@@ -33,19 +33,23 @@ const Projects = React.forwardRef((props, ref) => {
 					)}
 					<p>
 						{project.link && (
-							<Link href={project.link} target="_blank">
-								<span role="img" aria-label="eyes">
+							<Link href={project.link} target="_blank" darkMode={darkMode}>
+								<Emoji role="img" aria-label="eyes">
 									👀
-								</span>
+								</Emoji>
 								See in action
 							</Link>
 						)}
 						{project.link && project.code_link && " • "}
 						{project.code_link && (
-							<Link href={project.code_link} target="_blank">
-								<span role="img" aria-label="laptop">
+							<Link
+								href={project.code_link}
+								target="_blank"
+								darkMode={darkMode}
+							>
+								<Emoji role="img" aria-label="laptop">
 									💻
-								</span>
+								</Emoji>
 								See code
 							</Link>
 						)}

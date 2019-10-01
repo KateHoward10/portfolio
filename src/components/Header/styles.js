@@ -30,8 +30,8 @@ export const Image = styled.img`
 
 export const ToggleContainer = styled.div`
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 10px;
+	right: 20px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

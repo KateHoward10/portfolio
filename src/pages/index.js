@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import { Portfolio } from "./styles"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
@@ -13,6 +14,7 @@ function App() {
 	const other = useRef(null)
 	const footer = useRef(null)
 	const [fromTop, setFromTop] = useState(0)
+	const [darkMode, setDarkMode] = useState(false)
 
 	function handleScroll() {
 		if (menuPosition && window.pageYOffset >= menuPosition) {
@@ -33,8 +35,8 @@ function App() {
 	}, [])
 
 	return (
-		<div className="app">
-			<Header />
+		<Portfolio darkMode={darkMode}>
+			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
 			<Menu
 				ref={menu}
 				fromTop={fromTop}
@@ -43,10 +45,10 @@ function App() {
 				scrollToInfo={() => scrollToSection(other)}
 				scrollToContact={() => scrollToSection(footer)}
 			/>
-			<Projects ref={projects} />
-			<Other ref={other} />
+			<Projects ref={projects} darkMode={darkMode} />
+			<Other ref={other} darkMode={darkMode} />
 			<Footer ref={footer} />
-		</div>
+		</Portfolio>
 	)
 }
 

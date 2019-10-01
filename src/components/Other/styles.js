@@ -5,6 +5,8 @@ export const Box = styled.div`
 	border-radius: 10px;
 	margin: 4vw 10vw;
 	padding: 30px;
+	background-color: ${props => (props.darkMode ? "#111" : "#eee")};
+	color: ${props => (props.darkMode ? "#fff" : "#000")};
 `
 
 export const List = styled.ul`
@@ -15,4 +17,8 @@ export const List = styled.ul`
 export const Text = styled.li`
 	display: flex;
 	align-items: center;
+`
+
+export const Emoji = styled.span`
+	margin-right: 5px;
 `
