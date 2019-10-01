@@ -7,7 +7,7 @@ const Header = () => {
 		<Container>
 			<Image src={me} alt="Me" />
 			<TextContainer>
-				<h1>Kate Howard</h1>
+				<h1>Kate L. Howard</h1>
 				<p>
 					I am a front end developer based in Bristol, working mostly with React
 					and React Native. Here is some of my work.

@@ -12,7 +12,6 @@ const Projects = React.forwardRef((props, ref) => {
 						name
 						link
 						code_link
-						extra_link
 						desc
 						comingSoon
 					}
@@ -29,11 +28,6 @@ const Projects = React.forwardRef((props, ref) => {
 					{project.comingSoon && <ComingSoon />}
 					<h3>{project.name}</h3>
 					{project.desc && <p>{project.desc}</p>}
-					{project.extra_link && (
-						<a href={project.extra_link}>
-							<p>{project.extra_link}</p>
-						</a>
-					)}
 					{project.code_link && (
 						<Image src={require(`../../images/${project.code_link}.png`)} />
 					)}

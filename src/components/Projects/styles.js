@@ -5,13 +5,13 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5vw;
+  margin: 5vw;
 `
 
 export const Box = styled.div`
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 25vw;
+  width: 20vw;
   border-radius: 10px;
+  box-shadow: 0 0 30px lightgrey;
   padding: 20px;
   text-align: center;
   margin: 10px;

@@ -23,9 +23,7 @@ module.exports = {
 				name: "Tree Decorator",
 				link: "https://codepen.io/KateH2/pen/dwbomM",
 				code_link: "tree-decorator",
-				extra_link:
-					"https://simpleweb.co.uk/build-your-own-emoji-christmas-tree-with-svg/",
-				desc: "A fun project for Christmas, as featured on the SW blog",
+				desc: "A fun project for Christmas",
 			},
 			{
 				name: "Snek",

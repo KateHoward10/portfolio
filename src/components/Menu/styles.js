@@ -73,8 +73,8 @@ export const LinkContainer = styled.div`
 
 export const Link = styled.a`
 	padding: 0 20px;
-	color: #fff;
 	cursor: pointer;
+	color: ${props => (props.fromTop > 50 ? "#fff" : "blue")};
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen &&

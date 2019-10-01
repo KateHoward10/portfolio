@@ -12,7 +12,9 @@ import {
 
 const Footer = React.forwardRef((props, ref) => (
 	<Container ref={ref}>
-		<ComingSoon />
+		<ComingSoon>
+			Meanwhile, find me on <a href="https://github.com/KateHoward10">GitHub</a>
+		</ComingSoon>
 		<Text>Send me a message here</Text>
 		<InputContainer>
 			<Input placeholder="Name" />

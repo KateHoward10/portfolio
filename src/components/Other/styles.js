@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Box = styled.div`
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 10px;
-  margin: 5vw;
-  padding: 25px;
-`;
+	box-shadow: 0 0 20px lightgrey;
+	border-radius: 10px;
+	margin: 4vw 10vw;
+	padding: 30px;
+`
 
 export const List = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
+	list-style: none;
+	padding: 0;
+`
 
 export const Text = styled.li`
-  display: flex;
-  align-items: center;
-`;
+	display: flex;
+	align-items: center;
+`

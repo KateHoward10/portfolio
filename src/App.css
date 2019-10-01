@@ -1,9 +1,6 @@
 .app {
 	font-family: "Helvetica Neue", sans-serif;
 	min-height: 100vh;
-	background: linear-gradient(127deg, hsl(240, 100%, 36%), transparent 80%),
-		linear-gradient(217deg, hsl(180, 100%, 36%), transparent 80%),
-		linear-gradient(336deg, hsl(120, 100%, 36%), transparent 60%);
 }
 
 body {
