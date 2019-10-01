@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import {
 	Container,
 	TitleContainer,
@@ -15,12 +16,21 @@ const Menu = React.forwardRef(
 		ref
 	) => {
 		const [menuOpen, toggleMenuOpen] = useState(false)
+		const data = useStaticQuery(graphql`
+			query {
+				site {
+					siteMetadata {
+						author
+					}
+				}
+			}
+		`)
 
 		return (
 			<Container ref={ref} fromTop={fromTop}>
 				<TitleContainer>
 					<Title onClick={scrollToTop} fromTop={fromTop}>
-						Kate Howard
+						{data.site.siteMetadata.author}
 					</Title>
 				</TitleContainer>
 				<MenuIcon onClick={() => toggleMenuOpen(!menuOpen)}>

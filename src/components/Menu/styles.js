@@ -23,6 +23,8 @@ export const TitleContainer = styled.div`
 
 export const Title = styled.a`
 	color: rgba(255, 255, 255, ${props => props.fromTop}%);
+	font-family: monospace;
+	font-size: 20px;
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;

@@ -16,6 +16,8 @@ export const TextContainer = styled.div`
 	flex: 1;
 	justify-content: center;
 	color: white;
+	font-family: monospace;
+	margin: 20px;
 `
 
 export const Image = styled.img`
