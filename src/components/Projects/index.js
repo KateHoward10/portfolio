@@ -14,7 +14,6 @@ const Projects = React.forwardRef((props, ref) => {
 						code_link
 						extra_link
 						desc
-						image
 						comingSoon
 					}
 				}
@@ -35,8 +34,8 @@ const Projects = React.forwardRef((props, ref) => {
 							<p>{project.extra_link}</p>
 						</a>
 					)}
-					{project.image && (
-						<Image src={require(`../../images/${project.image}.png`)} />
+					{project.code_link && (
+						<Image src={require(`../../images/${project.code_link}.png`)} />
 					)}
 					<p>
 						{project.link && (
