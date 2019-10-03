@@ -45,7 +45,12 @@ function App() {
 				scrollToInfo={() => scrollToSection(other)}
 				scrollToContact={() => scrollToSection(footer)}
 			/>
-			<Projects ref={projects} darkMode={darkMode} />
+			<Projects
+				ref={projects}
+				darkMode={darkMode}
+				menuFixed={fromTop === 100}
+				menuHeight={menu && menu.current ? menu.current.offsetHeight : 0}
+			/>
 			<Other ref={other} darkMode={darkMode} />
 			<Footer ref={footer} />
 		</Portfolio>

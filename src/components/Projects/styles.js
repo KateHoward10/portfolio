@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5vw;
+  padding: 0 5vw;
+  margin-top: ${props => (props.menuFixed ? props.menuHeight : 0)}px;
 `
 
 export const Box = styled.div`

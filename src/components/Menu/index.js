@@ -27,7 +27,11 @@ const Menu = React.forwardRef(
 		`)
 
 		return (
-			<Container ref={ref} fromTop={fromTop}>
+			<Container
+				ref={ref}
+				fromTop={fromTop}
+				menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
+			>
 				<TitleContainer>
 					<Title onClick={scrollToTop} fromTop={fromTop}>
 						{data.site.siteMetadata.author}
