@@ -65,7 +65,7 @@ export const LinkContainer = styled.div`
 						align-items: center;
 						position: absolute;
 						background-color: hsl(240, 100%, 36%);
-						margin-top: ${props => props.menuHeight}px;
+						top: ${props => props.menuHeight}px;
 				  `
 				: css`
 						display: none;

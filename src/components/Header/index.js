@@ -29,7 +29,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 				<h1>{data.site.siteMetadata.author}</h1>
 				<h3>
 					I am a front end developer based in Bristol, working mostly with React
-					and React Native. Here is some of my work.
+					and React Native. Here are some of my personal projects.
 				</h3>
 			</TextContainer>
 			<ToggleContainer>

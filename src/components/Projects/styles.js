@@ -21,11 +21,13 @@ export const Box = styled.div`
   align-items: center;
   justify-content: space-between;
   color: ${props => (props.darkMode ? "#fff" : "#000")};
+  font-size: 15px;
   @media screen and (max-width: 900px) {
     width: 30vw;
   }
   @media screen and (max-width: 600px) {
     width: 80vw;
+    font-size: 3vw;
   }
 `
 
@@ -33,7 +35,6 @@ export const Link = styled.a`
   text-decoration: none;
   color: ${props => (props.darkMode ? "#fff" : "#000")};
   margin: 5px;
-  vertical-align: center;
 `
 
 export const Image = styled.img`

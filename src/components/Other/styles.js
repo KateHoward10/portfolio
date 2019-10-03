@@ -17,6 +17,11 @@ export const List = styled.ul`
 export const Text = styled.li`
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px;
+	font-size: 15px;
+	@media screen and (max-width: 600px) {
+		font-size: 3vw;
+	}
 `
 
 export const Emoji = styled.span`
