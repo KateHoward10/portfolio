@@ -11,7 +11,6 @@ const Projects = React.forwardRef(({ darkMode }, ref) => {
 					projects {
 						name
 						link
-						code_link
 						desc
 						comingSoon
 					}
@@ -26,33 +25,26 @@ const Projects = React.forwardRef(({ darkMode }, ref) => {
 			{projects.map((project, index) => (
 				<Box key={index} comingSoon={project.comingSoon} darkMode={darkMode}>
 					{project.comingSoon && <ComingSoon />}
-					<h3>{project.name}</h3>
-					{project.desc && <p>{project.desc}</p>}
-					{project.code_link && (
-						<Image src={require(`../../images/${project.code_link}.png`)} />
-					)}
+					<Link
+						href={`https://katehoward10.github.io/${project.link}/`}
+						target="_blank"
+						darkMode={darkMode}
+					>
+						<h3>{project.name}</h3>
+						{project.desc && <p>{project.desc}</p>}
+						<Image src={require(`../../images/${project.link}.png`)} />
+					</Link>
 					<p>
-						{project.link && (
-							<Link href={project.link} target="_blank" darkMode={darkMode}>
-								<Emoji role="img" aria-label="eyes">
-									👀
-								</Emoji>
-								See in action
-							</Link>
-						)}
-						{project.link && project.code_link && " • "}
-						{project.code_link && (
-							<Link
-								href={project.code_link}
-								target="_blank"
-								darkMode={darkMode}
-							>
-								<Emoji role="img" aria-label="laptop">
-									💻
-								</Emoji>
-								See code
-							</Link>
-						)}
+						<Link
+							href={`https://github.com/katehoward10/${project.link}`}
+							target="_blank"
+							darkMode={darkMode}
+						>
+							<Emoji role="img" aria-label="laptop">
+								💻
+							</Emoji>
+							See code
+						</Link>
 					</p>
 				</Box>
 			))}
