@@ -26,9 +26,9 @@ export const Box = styled.div`
   @media screen and (max-width: 900px) {
     width: 30vw;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     width: 80vw;
-    font-size: 3vw;
+    font-size: 4vw;
   }
 `
 
@@ -43,7 +43,7 @@ export const Image = styled.img`
   @media screen and (max-width: 900px) {
     width: 24vw;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     width: 70vw;
   }
 `

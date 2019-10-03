@@ -16,6 +16,9 @@ export const InputContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 90vw;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 
 export const Input = styled.input`
@@ -31,6 +34,7 @@ export const TextInput = styled.textarea`
   font-size: 16px;
   flex: 1;
   height: 10vw;
+  font-family: "Helvetica Neue";
 `
 
 export const ButtonContainer = styled.div`

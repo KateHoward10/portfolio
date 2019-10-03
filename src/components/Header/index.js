@@ -25,7 +25,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 	return (
 		<Container>
 			<Image src={me} alt="Me" />
-			<TextContainer>
+			<TextContainer darkMode={darkMode}>
 				<h1>{data.site.siteMetadata.author}</h1>
 				<h3>
 					I am a front end developer based in Bristol, working mostly with React

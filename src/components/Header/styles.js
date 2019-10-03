@@ -8,6 +8,10 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `
 
 export const TextContainer = styled.div`
@@ -15,9 +19,12 @@ export const TextContainer = styled.div`
 	flex-direction: column;
 	flex: 1;
 	justify-content: center;
-	color: white;
+	color: ${props => (props.darkMode ? "white" : "black")};
 	font-family: monospace;
 	margin: 20px;
+	@media screen and (max-width: 500px) {
+		text-align: center;
+	}
 `
 
 export const Image = styled.img`
@@ -26,6 +33,10 @@ export const Image = styled.img`
 	object-fit: cover;
 	border-radius: 50%;
 	margin: 20px;
+	@media screen and (max-width: 500px) {
+		width: 60vw;
+		height: 60vw;
+	}
 `
 
 export const ToggleContainer = styled.div`

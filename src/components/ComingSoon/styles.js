@@ -15,11 +15,11 @@ export const Container = styled.div`
 `
 
 export const Emoji = styled.span`
-	font-size: 50px;
+	font-size: 48px;
 `
 
 export const Text = styled.p`
-	font-size: 24px;
+	font-size: 20px;
 	color: white;
 	text-align: center;
 `

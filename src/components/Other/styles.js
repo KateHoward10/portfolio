@@ -19,8 +19,8 @@ export const Text = styled.li`
 	align-items: center;
 	margin-bottom: 10px;
 	font-size: 15px;
-	@media screen and (max-width: 600px) {
-		font-size: 3vw;
+	@media screen and (max-width: 500px) {
+		font-size: 4vw;
 	}
 `
 

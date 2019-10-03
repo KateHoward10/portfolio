@@ -2,3 +2,8 @@ body {
 	margin: 0;
 	font-family: "Helvetica Neue", sans-serif;
 }
+
+a {
+	color: deepskyblue;
+	text-decoration: none;
+}
