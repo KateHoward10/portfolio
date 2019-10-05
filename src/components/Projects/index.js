@@ -36,9 +36,9 @@ const Projects = React.forwardRef(
 							target="_blank"
 							darkMode={darkMode}
 						>
+							<Image src={require(`../../images/${project.link}.png`)} />
 							<h3>{project.name}</h3>
 							{project.desc && <p>{project.desc}</p>}
-							<Image src={require(`../../images/${project.link}.png`)} />
 						</Link>
 						<p>
 							<Link

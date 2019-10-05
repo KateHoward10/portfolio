@@ -9,20 +9,15 @@ module.exports = {
 				desc: "16 rounds of thematically linked music intros",
 			},
 			{
-				name: "Ping Pong Tournament Generator",
-				link: "Ping-Pong-App",
-				desc:
-					"A React app which randomly assigns ping pong competitors to matches",
-			},
-			{
-				name: "Noughts and Crosses",
-				link: "noughts-and-crosses",
+				name: "Games with Lines",
+				link: "games-with-lines",
 				desc: "Play Noughts and Crosses and/or Connect 4, in React!",
 			},
 			{
 				name: "Tree Decorator",
 				link: "tree-decorator",
-				desc: "A fun project for Christmas",
+				desc:
+					"A fun project for Christmas, with snow, sparkles, and lots of emojis",
 			},
 			{
 				name: "Snek",

@@ -39,13 +39,8 @@ export const Link = styled.a`
 `
 
 export const Image = styled.img`
-  width: 15vw;
-  @media screen and (max-width: 900px) {
-    width: 24vw;
-  }
-  @media screen and (max-width: 500px) {
-    width: 70vw;
-  }
+  width: 100%;
+  object-fit: cover;
 `
 
 export const Emoji = styled.span`
