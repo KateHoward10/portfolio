@@ -50,6 +50,8 @@ const Menu = React.forwardRef(
 				<LinkContainer
 					menuOpen={menuOpen}
 					menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
+					menuWidth={ref && ref.current ? ref.current.offsetWidth : 0}
+					fromTop={fromTop}
 				>
 					<Link
 						menuOpen={menuOpen}

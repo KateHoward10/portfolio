@@ -55,6 +55,9 @@ export const Bar = styled.div`
 `
 
 export const LinkContainer = styled.div`
+	position: absolute;
+	left: ${props => props.fromTop / 2 + 50}%;
+	transform: translateX(${props => -(props.fromTop / 2 + 50)}%);
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen
@@ -76,7 +79,10 @@ export const LinkContainer = styled.div`
 export const Link = styled.a`
 	padding: 0 20px;
 	cursor: pointer;
-	color: ${props => (props.fromTop > 50 ? "#fff" : "deepskyblue")};
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: bold;
+	color: deepskyblue;
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen &&
