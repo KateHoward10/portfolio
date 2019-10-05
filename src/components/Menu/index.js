@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import {
 	Container,
@@ -26,6 +26,10 @@ const Menu = React.forwardRef(
 			}
 		`)
 
+		useEffect(() => {
+			if (fromTop < 100) toggleMenuOpen(false)
+		}, [fromTop, toggleMenuOpen])
+
 		return (
 			<Container
 				ref={ref}
@@ -50,7 +54,6 @@ const Menu = React.forwardRef(
 				<LinkContainer
 					menuOpen={menuOpen}
 					menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
-					menuWidth={ref && ref.current ? ref.current.offsetWidth : 0}
 					fromTop={fromTop}
 				>
 					<Link
