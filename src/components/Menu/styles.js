@@ -14,6 +14,8 @@ export const Container = styled.nav`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 2px solid hsl(240, 100%, 36%);
+	box-shadow: 0 0 10px grey;
 	z-index: 100;
 `
 
@@ -82,7 +84,7 @@ export const Link = styled.a`
 	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
-	color: deepskyblue;
+	color: hsl(240, 100%, ${props => props.fromTop}%);
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen &&
