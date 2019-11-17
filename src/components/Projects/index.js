@@ -12,6 +12,7 @@ const Projects = React.forwardRef(
 						projects {
 							name
 							link
+							url
 							desc
 							comingSoon
 						}
@@ -57,7 +58,10 @@ const Projects = React.forwardRef(
 						>
 							{project.comingSoon && <ComingSoon />}
 							<Link
-								href={`https://katehoward10.github.io/${project.link}/`}
+								href={
+									project.url ||
+									`https://katehoward10.github.io/${project.link}/`
+								}
 								target="_blank"
 								darkMode={darkMode}
 							>
