@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 5vw;
-  margin-top: ${props => (props.menuFixed ? props.menuHeight : 0)}px;
+  margin-top: ${props => (props.menuFixed ? props.menuHeight + 42 : 42)}px;
 `
 
 export const Box = styled.div`

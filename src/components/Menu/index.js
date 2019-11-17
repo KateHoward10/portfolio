@@ -40,7 +40,6 @@ const Menu = React.forwardRef(
 		return (
 			<Container
 				ref={ref}
-				darkMode={darkMode}
 				fromTop={fromTop}
 				menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
 			>
