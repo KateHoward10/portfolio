@@ -12,7 +12,14 @@ import {
 
 const Menu = React.forwardRef(
 	(
-		{ fromTop, scrollToTop, scrollToProjects, scrollToInfo, scrollToContact },
+		{
+			darkMode,
+			fromTop,
+			scrollToTop,
+			scrollToProjects,
+			scrollToInfo,
+			scrollToContact,
+		},
 		ref
 	) => {
 		const [menuOpen, toggleMenuOpen] = useState(false)
@@ -33,6 +40,7 @@ const Menu = React.forwardRef(
 		return (
 			<Container
 				ref={ref}
+				darkMode={darkMode}
 				fromTop={fromTop}
 				menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
 			>
@@ -60,13 +68,24 @@ const Menu = React.forwardRef(
 						menuOpen={menuOpen}
 						onClick={scrollToProjects}
 						fromTop={fromTop}
+						darkMode={darkMode}
 					>
 						Projects
 					</Link>
-					<Link menuOpen={menuOpen} onClick={scrollToInfo} fromTop={fromTop}>
+					<Link
+						menuOpen={menuOpen}
+						onClick={scrollToInfo}
+						fromTop={fromTop}
+						darkMode={darkMode}
+					>
 						Info
 					</Link>
-					<Link menuOpen={menuOpen} onClick={scrollToContact} fromTop={fromTop}>
+					<Link
+						menuOpen={menuOpen}
+						onClick={scrollToContact}
+						fromTop={fromTop}
+						darkMode={darkMode}
+					>
 						Contact
 					</Link>
 				</LinkContainer>

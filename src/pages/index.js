@@ -39,6 +39,7 @@ function App() {
 			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
 			<Menu
 				ref={menu}
+				darkMode={darkMode}
 				fromTop={fromTop}
 				scrollToTop={() => window.scrollTo(0, 0)}
 				scrollToProjects={() => scrollToSection(projects)}

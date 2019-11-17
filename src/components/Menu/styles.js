@@ -8,7 +8,10 @@ export const Container = styled.nav`
 			position: fixed;
 			top: 0;
 		`}
-	background-color: hsla(240, 100%, 36%, ${props => props.fromTop}%);
+	background-color: ${props =>
+		props.darkMode
+			? "#111"
+			: `hsla(240, 100%, 36%, ${props => props.fromTop}%)`};
 	display: flex;
 	padding: 20px 0;
 	flex-direction: row;
@@ -84,7 +87,8 @@ export const Link = styled.a`
 	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
-	color: hsl(240, 100%, ${props => props.fromTop}%);
+	color: ${props =>
+		props.darkMode ? "#FFF" : `hsl(240, 100%, ${props.fromTop}%)`};
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen &&
