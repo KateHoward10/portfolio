@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 export const Container = styled.div`
 	background-color: #8ee1dd;
@@ -8,6 +9,7 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
+	width: 100%;
 	@media screen and (max-width: 500px) {
 		flex-direction: column;
 		align-items: center;
@@ -27,7 +29,7 @@ export const TextContainer = styled.div`
 	}
 `
 
-export const Image = styled.img`
+export const Image = styled(Img)`
 	width: 200px;
 	height: 200px;
 	object-fit: cover;

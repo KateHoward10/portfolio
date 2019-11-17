@@ -2,6 +2,8 @@ module.exports = {
 	siteMetadata: {
 		title: "Kate L. Howard’s Portfolio",
 		author: "Kate L. Howard",
+		intro:
+			"I am a front end developer based in Bristol, working mostly with React and React Native. Here are some of my personal projects.",
 		projects: [
 			{
 				name: "Music Connections Quiz",
@@ -43,4 +45,14 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/src/`,
+			},
+		},
+	],
 }

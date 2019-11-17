@@ -9,7 +9,6 @@ import {
 	Hidden,
 	Slider,
 } from "./styles"
-import me from "../../images/picture-of-me.jpg"
 
 const Header = ({ darkMode, setDarkMode }) => {
 	const data = useStaticQuery(graphql`
@@ -17,6 +16,14 @@ const Header = ({ darkMode, setDarkMode }) => {
 			site {
 				siteMetadata {
 					author
+					intro
+				}
+			}
+			me: file(relativePath: { eq: "images/picture-of-me.jpg" }) {
+				childImageSharp {
+					fluid(maxWidth: 500) {
+						...GatsbyImageSharpFluid
+					}
 				}
 			}
 		}
@@ -24,13 +31,10 @@ const Header = ({ darkMode, setDarkMode }) => {
 
 	return (
 		<Container>
-			<Image src={me} alt="Me" />
+			<Image fluid={data.me.childImageSharp.fluid} alt="Me" />
 			<TextContainer darkMode={darkMode}>
 				<h1>{data.site.siteMetadata.author}</h1>
-				<h3>
-					I am a front end developer based in Bristol, working mostly with React
-					and React Native. Here are some of my personal projects.
-				</h3>
+				<h3>{data.site.siteMetadata.intro}</h3>
 			</TextContainer>
 			<ToggleContainer>
 				<span role="img" aria-label="sun">
