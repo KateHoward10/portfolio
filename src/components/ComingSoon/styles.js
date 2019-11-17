@@ -12,6 +12,7 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	border-radius: 10px;
+	z-index: 10;
 `
 
 export const Emoji = styled.span`

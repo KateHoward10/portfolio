@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 export const Container = styled.div`
   display: flex;
@@ -38,7 +39,7 @@ export const Link = styled.a`
   margin: 5px;
 `
 
-export const Image = styled.img`
+export const Image = styled(Img)`
   width: 100%;
   object-fit: cover;
 `

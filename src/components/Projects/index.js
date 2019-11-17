@@ -17,9 +17,26 @@ const Projects = React.forwardRef(
 						}
 					}
 				}
+				allFile(
+					sort: { order: ASC, fields: [absolutePath] }
+					filter: { relativePath: { regex: "/projects/.*.png/" } }
+				) {
+					edges {
+						node {
+							relativePath
+							name
+							childImageSharp {
+								sizes(maxWidth: 240) {
+									...GatsbyImageSharpSizes
+								}
+							}
+						}
+					}
+				}
 			}
 		`)
 		const projects = data.site.siteMetadata.projects
+		const projectImages = data.allFile.edges
 
 		return (
 			<Container
@@ -28,32 +45,44 @@ const Projects = React.forwardRef(
 				menuFixed={menuFixed}
 				menuHeight={menuHeight}
 			>
-				{projects.map((project, index) => (
-					<Box key={index} comingSoon={project.comingSoon} darkMode={darkMode}>
-						{project.comingSoon && <ComingSoon />}
-						<Link
-							href={`https://katehoward10.github.io/${project.link}/`}
-							target="_blank"
+				{projects.map((project, index) => {
+					const image = projectImages.find(
+						item => item.node.name === project.link
+					)
+					return (
+						<Box
+							key={index}
+							comingSoon={project.comingSoon}
 							darkMode={darkMode}
 						>
-							<Image src={require(`../../images/${project.link}.png`)} />
-							<h3>{project.name}</h3>
-							{project.desc && <p>{project.desc}</p>}
-						</Link>
-						<p>
+							{project.comingSoon && <ComingSoon />}
 							<Link
-								href={`https://github.com/katehoward10/${project.link}`}
+								href={`https://katehoward10.github.io/${project.link}/`}
 								target="_blank"
 								darkMode={darkMode}
 							>
-								<Emoji role="img" aria-label="laptop">
-									💻
-								</Emoji>
-								See code
+								<Image
+									sizes={image.node.childImageSharp.sizes}
+									alt={project.name}
+								/>
+								<h3>{project.name}</h3>
+								{project.desc && <p>{project.desc}</p>}
 							</Link>
-						</p>
-					</Box>
-				))}
+							<p>
+								<Link
+									href={`https://github.com/katehoward10/${project.link}`}
+									target="_blank"
+									darkMode={darkMode}
+								>
+									<Emoji role="img" aria-label="laptop">
+										💻
+									</Emoji>
+									See code
+								</Link>
+							</p>
+						</Box>
+					)
+				})}
 			</Container>
 		)
 	}
