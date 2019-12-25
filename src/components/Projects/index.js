@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import ComingSoon from "../ComingSoon"
 import { Container, Box, Link, Image, Emoji } from "./styles"
 
 const Projects = React.forwardRef(
@@ -14,7 +13,6 @@ const Projects = React.forwardRef(
 							link
 							url
 							desc
-							comingSoon
 						}
 					}
 				}
@@ -56,7 +54,6 @@ const Projects = React.forwardRef(
 							comingSoon={project.comingSoon}
 							darkMode={darkMode}
 						>
-							{project.comingSoon && <ComingSoon />}
 							<Link
 								href={
 									project.url ||
