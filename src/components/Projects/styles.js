@@ -29,7 +29,7 @@ export const Box = styled.div`
   }
   @media screen and (max-width: 500px) {
     width: 80vw;
-    font-size: 4vw;
+    font-size: 3vw;
   }
 `
 
@@ -40,9 +40,19 @@ export const Link = styled.a`
   width: 100%;
 `
 
+export const Heading = styled.h3`
+  margin-top: 0;
+`
+
 export const Image = styled(Img)`
-  width: 100%;
+  height: 20vw;
   object-fit: cover;
+  @media screen and (max-width: 900px) {
+    height: 30vw;
+  }
+  @media screen and (max-width: 500px) {
+    height: 80vw;
+  }
 `
 
 export const CodeLink = styled.a`

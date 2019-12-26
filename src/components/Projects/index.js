@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Container, Box, Link, Image, CodeLink } from "./styles"
+import { Container, Box, Link, Heading, Image, CodeLink } from "./styles"
 import { FaCode } from "react-icons/fa"
 
 const Projects = React.forwardRef(
@@ -63,22 +63,20 @@ const Projects = React.forwardRef(
 								target="_blank"
 								darkMode={darkMode}
 							>
-								<h3>{project.name}</h3>
+								<Heading>{project.name}</Heading>
 								<Image
 									sizes={image.node.childImageSharp.sizes}
 									alt={project.name}
 								/>
 							</Link>
-							<p>
-								<CodeLink
-									href={`https://github.com/katehoward10/${project.link}`}
-									target="_blank"
-									darkMode={darkMode}
-								>
-									<FaCode style={{ marginRight: "8px" }} />
-									See code
-								</CodeLink>
-							</p>
+							<CodeLink
+								href={`https://github.com/katehoward10/${project.link}`}
+								target="_blank"
+								darkMode={darkMode}
+							>
+								<FaCode style={{ marginRight: "8px" }} />
+								See code
+							</CodeLink>
 						</Box>
 					)
 				})}

@@ -3,8 +3,8 @@ import styled from "styled-components"
 export const Box = styled.div`
 	box-shadow: 0 0 20px lightgrey;
 	border-radius: 10px;
-	margin: 4vw 10vw;
-	padding: 30px;
+	margin: 4vw 8vw;
+	padding: 20px;
 	background-color: ${props => (props.darkMode ? "#111" : "#eee")};
 	color: ${props => (props.darkMode ? "#fff" : "#000")};
 `
@@ -18,12 +18,16 @@ export const ListItem = styled.li`
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
-	font-size: 15px;
-	@media screen and (max-width: 500px) {
-		font-size: 4vw;
-	}
+`
+
+export const IconContainer = styled.div`
+	width: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `
 
 export const Text = styled.span`
+	flex: 1;
 	margin-left: 10px;
 `
