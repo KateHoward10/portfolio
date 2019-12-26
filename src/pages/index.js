@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Portfolio } from "./styles"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
@@ -35,7 +34,10 @@ function App() {
 	}, [])
 
 	return (
-		<Portfolio darkMode={darkMode}>
+		<div
+			className="portfolio"
+			style={{ backgroundColor: darkMode ? "#111" : "#eee" }}
+		>
 			<Header darkMode={darkMode} setDarkMode={setDarkMode} />
 			<Menu
 				ref={menu}
@@ -54,7 +56,7 @@ function App() {
 			/>
 			<Other ref={other} darkMode={darkMode} />
 			<Footer ref={footer} />
-		</Portfolio>
+		</div>
 	)
 }
 

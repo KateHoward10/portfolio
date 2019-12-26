@@ -36,7 +36,8 @@ export const Box = styled.div`
 export const Link = styled.a`
   text-decoration: none;
   color: ${props => (props.darkMode ? "#fff" : "#000")};
-  margin: 5px;
+  margin: 10px;
+  width: 100%;
 `
 
 export const Image = styled(Img)`

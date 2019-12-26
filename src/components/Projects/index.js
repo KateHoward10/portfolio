@@ -63,12 +63,11 @@ const Projects = React.forwardRef(
 								target="_blank"
 								darkMode={darkMode}
 							>
+								<h3>{project.name}</h3>
 								<Image
 									sizes={image.node.childImageSharp.sizes}
 									alt={project.name}
 								/>
-								<h3>{project.name}</h3>
-								{project.desc && <p>{project.desc}</p>}
 							</Link>
 							<p>
 								<CodeLink
