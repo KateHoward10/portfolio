@@ -9,6 +9,7 @@ import {
 	Hidden,
 	Slider,
 } from "./styles"
+import { FaSun, FaMoon } from "react-icons/fa"
 
 const Header = ({ darkMode, setDarkMode }) => {
 	const data = useStaticQuery(graphql`
@@ -37,9 +38,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 				<h3>{data.site.siteMetadata.intro}</h3>
 			</TextContainer>
 			<ToggleContainer>
-				<span role="img" aria-label="sun">
-					🌞
-				</span>
+				<FaSun color="gold" />
 				<Toggle darkMode={darkMode}>
 					<Hidden
 						type="checkbox"
@@ -47,9 +46,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 					/>
 					<Slider darkMode={darkMode} />
 				</Toggle>
-				<span role="img" aria-label="moon">
-					🌙
-				</span>
+				<FaMoon color="gold" />
 			</ToggleContainer>
 		</Container>
 	)

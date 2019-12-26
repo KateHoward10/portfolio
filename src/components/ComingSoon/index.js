@@ -1,16 +1,15 @@
 import React from "react"
 import { Container, Emoji, Text } from "./styles"
+import { FaHourglassStart } from "react-icons/fa"
 
 const ComingSoon = ({ children }) => {
-	return (
-		<Container>
-			<Emoji role="img" aria-label="hourglass">
-				⏳
-			</Emoji>
-			<Text>Coming soon!</Text>
-			{children && <Text>{children}</Text>}
-		</Container>
-	)
+  return (
+    <Container>
+      <FaHourglassStart size="40" color="#FFF" />
+      <Text>Coming soon!</Text>
+      {children && <Text>{children}</Text>}
+    </Container>
+  )
 }
 
 export default ComingSoon

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Container, Box, Link, Image, Emoji } from "./styles"
+import { Container, Box, Link, Image, CodeLink } from "./styles"
+import { FaCode } from "react-icons/fa"
 
 const Projects = React.forwardRef(
 	({ darkMode, menuFixed, menuHeight }, ref) => {
@@ -70,16 +71,14 @@ const Projects = React.forwardRef(
 								{project.desc && <p>{project.desc}</p>}
 							</Link>
 							<p>
-								<Link
+								<CodeLink
 									href={`https://github.com/katehoward10/${project.link}`}
 									target="_blank"
 									darkMode={darkMode}
 								>
-									<Emoji role="img" aria-label="laptop">
-										💻
-									</Emoji>
+									<FaCode style={{ marginRight: "8px" }} />
 									See code
-								</Link>
+								</CodeLink>
 							</p>
 						</Box>
 					)

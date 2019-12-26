@@ -44,6 +44,10 @@ export const Image = styled(Img)`
   object-fit: cover;
 `
 
-export const Emoji = styled.span`
-  margin-right: 5px;
+export const CodeLink = styled.a`
+  text-decoration: none;
+  color: ${props => (props.darkMode ? "#fff" : "#000")};
+  margin: 5px;
+  display: flex;
+  align-items: center;
 `

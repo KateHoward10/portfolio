@@ -14,7 +14,7 @@ export const List = styled.ul`
 	padding: 0;
 `
 
-export const Text = styled.li`
+export const ListItem = styled.li`
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
@@ -24,6 +24,6 @@ export const Text = styled.li`
 	}
 `
 
-export const Emoji = styled.span`
-	margin-right: 5px;
+export const Text = styled.span`
+	margin-left: 10px;
 `
