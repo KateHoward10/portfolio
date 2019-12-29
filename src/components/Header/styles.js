@@ -3,9 +3,13 @@ import Img from "gatsby-image"
 
 export const Container = styled.div`
 	background-color: #8ee1dd;
-	background: linear-gradient(127deg, hsl(240, 100%, 36%), transparent 80%),
-		linear-gradient(217deg, hsl(180, 100%, 36%), transparent 80%),
-		linear-gradient(336deg, hsl(120, 100%, 36%), transparent 60%);
+	background: linear-gradient(
+			127deg,
+			hsla(240, 100%, 36%, 90%),
+			transparent 80%
+		),
+		linear-gradient(217deg, hsla(180, 100%, 36%, 90%), transparent 80%),
+		linear-gradient(336deg, hsla(120, 100%, 36%, 90%), transparent 80%);
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
@@ -34,7 +38,7 @@ export const Image = styled(Img)`
 	height: 200px;
 	object-fit: cover;
 	border-radius: 50%;
-	margin: 20px;
+	margin: 25px;
 	@media screen and (max-width: 500px) {
 		width: 60vw;
 		height: 60vw;

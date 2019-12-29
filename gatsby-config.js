@@ -3,45 +3,43 @@ module.exports = {
 		title: "Kate L. Howard’s Portfolio",
 		author: "Kate L. Howard",
 		intro:
-			"I am a front end developer based in Bristol, working mostly with React and React Native. Here are some of my personal projects.",
+			"I am a front end developer based in Bristol, working mostly with React and React Native. This is where my personal projects live.",
 		projects: [
 			{
 				name: "Music Connections Quiz",
 				link: "music-connections-quiz",
-				desc: "16 rounds of thematically linked music intros",
+				tags: ["ReactJS", "Quiz", "Audio"],
 			},
 			{
 				name: "Briz Quiz List",
 				link: "quiz-lister",
 				url: "https://brizquizlist.herokuapp.com",
-				desc: "A directory of Bristol pub quizzes, built with Ruby on Rails",
+				tags: ["Ruby on Rails"],
 			},
 			{
 				name: "Snek",
 				link: "snek",
-				desc: "The classic game of snake, with emojis for food",
+				tags: ["ReactJS", "Games"],
 			},
 			{
 				name: "Tree Decorator",
 				link: "tree-decorator",
-				desc:
-					"A fun project for Christmas, with snow, sparkles, and lots of emojis",
+				tags: ["VanillaJS", "SVGs", "Christmas"],
 			},
 			{
 				name: "Water Works",
 				link: "water-works",
-				desc:
-					"An interview challenge allowing the user to record their water consumption",
+				tags: ["ReactJS"],
 			},
 			{
 				name: "Games with Lines",
 				link: "games-with-lines",
-				desc: "Play Noughts and Crosses and/or Connect 4, in React!",
+				tags: ["ReactJS", "Games"],
 			},
 			{
 				name: "Countdown",
 				link: "countdown",
-				desc: "The numbers round recreated in React, with hot-formula-parser",
+				tags: ["ReactJS", "Games"],
 			},
 		],
 	},
