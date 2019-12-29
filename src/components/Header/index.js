@@ -35,7 +35,7 @@ const Header = ({ darkMode, setDarkMode }) => {
 			<Image fluid={data.me.childImageSharp.fluid} alt="Me" />
 			<TextContainer darkMode={darkMode}>
 				<h1>{data.site.siteMetadata.author}</h1>
-				<h3>{data.site.siteMetadata.intro}</h3>
+				<p>{data.site.siteMetadata.intro}</p>
 			</TextContainer>
 			<ToggleContainer>
 				<FaSun color="gold" />

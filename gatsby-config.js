@@ -41,6 +41,11 @@ module.exports = {
 				link: "countdown",
 				tags: ["ReactJS", "Games"],
 			},
+			{
+				name: "Su Doku",
+				link: "sudoku",
+				tags: ["ReactJS", "Games", "Puzzles"],
+			},
 		],
 	},
 	plugins: [

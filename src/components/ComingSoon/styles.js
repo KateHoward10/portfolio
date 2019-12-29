@@ -14,10 +14,6 @@ export const Container = styled.div`
 	z-index: 10;
 `
 
-export const Emoji = styled.span`
-	font-size: 48px;
-`
-
 export const Text = styled.p`
 	font-size: 20px;
 	color: white;

@@ -6,7 +6,6 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 5vw;
   margin-top: ${props => (props.menuFixed ? props.menuHeight + 42 : 42)}px;
 `
 
@@ -28,7 +27,8 @@ export const Box = styled.div`
     width: 32vw;
   }
   @media screen and (max-width: 500px) {
-    width: 80vw;
+    width: 100%;
+    margin: 2vw 8vw;
   }
 `
 
@@ -61,7 +61,6 @@ export const Tag = styled.div`
   color: white;
   padding: 5px;
   margin: 5px;
-  font-family: monospace;
   font-size: 12px;
 `
 

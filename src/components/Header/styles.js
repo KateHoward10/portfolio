@@ -26,7 +26,6 @@ export const TextContainer = styled.div`
 	flex: 1;
 	justify-content: center;
 	color: ${props => (props.darkMode ? "white" : "black")};
-	font-family: monospace;
 	margin: 20px;
 	@media screen and (max-width: 500px) {
 		text-align: center;

@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Emoji, Text } from "./styles"
+import { Container, Text } from "./styles"
 import { FaHourglassStart } from "react-icons/fa"
 
 const ComingSoon = ({ children }) => {
