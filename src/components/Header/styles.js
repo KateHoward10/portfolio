@@ -20,27 +20,43 @@ export const Container = styled.div`
 	}
 `
 
-export const TextContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	justify-content: center;
-	color: ${props => (props.darkMode ? "white" : "black")};
-	margin: 20px;
-	@media screen and (max-width: 500px) {
-		text-align: center;
-	}
-`
-
 export const Image = styled(Img)`
-	width: 200px;
-	height: 200px;
+	width: 60vw;
+	height: 60vw;
 	object-fit: cover;
 	border-radius: 50%;
 	margin: 25px;
-	@media screen and (max-width: 500px) {
-		width: 60vw;
-		height: 60vw;
+	@media screen and (min-width: 500px) {
+		width: 200px;
+		height: 200px;
+		float: left;
+		shape-outside: circle(110px);
+	}
+	@media screen and (min-width: 700px) {
+		shape-outside: circle(120px);
+	}
+`
+
+export const TextContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: ${({ darkMode }) => (darkMode ? "white" : "black")};
+	margin: 20px;
+	text-align: center;
+	@media screen and (min-width: 500px) {
+		display: block;
+		text-align: left;
+	}
+`
+
+export const Intro = styled.div`
+	max-width: 1080px;
+	@media screen and (min-width: 540px) {
+		padding-top: 20px;
+	}
+	@media screen and (min-width: 720px) {
+		padding-top: 30px;
 	}
 `
 

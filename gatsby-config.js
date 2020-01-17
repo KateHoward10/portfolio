@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
-		title: "Kate L. Howard’s Portfolio",
-		author: "Kate L. Howard",
+		title: "Kate Howard",
+		author: "Kate Howard",
 		intro:
 			"I am a front end developer based in Bristol, working mostly with React and React Native. This is where my personal projects live.",
 		projects: [

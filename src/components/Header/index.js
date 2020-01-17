@@ -4,6 +4,7 @@ import {
 	Container,
 	TextContainer,
 	Image,
+	Intro,
 	ToggleContainer,
 	Toggle,
 	Hidden,
@@ -32,10 +33,12 @@ const Header = ({ darkMode, setDarkMode }) => {
 
 	return (
 		<Container>
-			<Image fluid={data.me.childImageSharp.fluid} alt="Me" />
 			<TextContainer darkMode={darkMode}>
-				<h1>{data.site.siteMetadata.author}</h1>
-				<p>{data.site.siteMetadata.intro}</p>
+				<Image fluid={data.me.childImageSharp.fluid} alt="Me" />
+				<Intro>
+					<h1>{data.site.siteMetadata.author}</h1>
+					<p>{data.site.siteMetadata.intro}</p>
+				</Intro>
 			</TextContainer>
 			<ToggleContainer>
 				<FaSun color="gold" />
