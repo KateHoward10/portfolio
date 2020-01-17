@@ -11,11 +11,11 @@ export const Container = styled.div`
 
 export const Box = styled.div`
   width: 20vw;
-  border-radius: 10px;
-  box-shadow: 0 0 30px lightgrey;
+  border-radius: 5px;
+  box-shadow: 0 0 10px grey;
   padding: 10px;
   text-align: center;
-  margin: 10px;
+  margin: 15px;
   position: ${props => (props.comingSoon ? "relative" : "static")};
   display: flex;
   flex-direction: column;

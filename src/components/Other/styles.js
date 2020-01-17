@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const Box = styled.div`
-	box-shadow: 0 0 20px lightgrey;
-	border-radius: 10px;
+	box-shadow: 0 0 10px grey;
+	border-radius: 5px;
 	margin: 4vw 8vw;
 	padding: 20px;
 	background-color: ${props => (props.darkMode ? "#111" : "#eee")};

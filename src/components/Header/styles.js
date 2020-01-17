@@ -62,6 +62,7 @@ export const Toggle = styled.label`
 	flex-direction: row;
 	align-items: center;
 	margin: 5px;
+	box-shadow: inset 0 0 5px grey;
 	justify-content: ${props => (props.darkMode ? "flex-end" : "flex-start")};
 `
 
@@ -75,6 +76,6 @@ export const Slider = styled.div`
 	height: 30px;
 	border-radius: 50%;
 	margin: 3px;
-	box-shadow: 0 0 6px grey;
+	box-shadow: 0 0 5px grey;
 	background-color: ${props => (props.darkMode ? "navy" : "deepskyblue")};
 `
