@@ -56,6 +56,8 @@ export const Bar = styled.div`
 `
 
 export const LinkContainer = styled.div`
+	display: flex;
+	flex-direction: row;
 	position: absolute;
 	left: ${props => props.fromTop / 2 + 50}%;
 	transform: translateX(${props => -(props.fromTop / 2 + 50)}%);
@@ -78,13 +80,18 @@ export const LinkContainer = styled.div`
 `
 
 export const Link = styled.a`
+	display: flex;
+	align-items: center;
 	padding: 0 20px;
 	cursor: pointer;
 	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
 	color: ${props =>
-		props.darkMode ? "#FFF" : `hsl(240, 100%, ${props.fromTop}%)`};
+		props.darkMode ? "#FFF" : `hsl(255, 0%, ${props.fromTop}%)`};
+	svg {
+		margin-right: 5px;
+	}
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen &&

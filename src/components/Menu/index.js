@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { FaLaptopCode, FaInfoCircle, FaEnvelope } from "react-icons/fa"
 import {
 	Container,
 	TitleContainer,
@@ -69,7 +70,7 @@ const Menu = React.forwardRef(
 						fromTop={fromTop}
 						darkMode={darkMode}
 					>
-						Projects
+						<FaLaptopCode /> Projects
 					</Link>
 					<Link
 						menuOpen={menuOpen}
@@ -77,7 +78,7 @@ const Menu = React.forwardRef(
 						fromTop={fromTop}
 						darkMode={darkMode}
 					>
-						Info
+						<FaInfoCircle /> Info
 					</Link>
 					<Link
 						menuOpen={menuOpen}
@@ -85,7 +86,7 @@ const Menu = React.forwardRef(
 						fromTop={fromTop}
 						darkMode={darkMode}
 					>
-						Contact
+						<FaEnvelope /> Contact
 					</Link>
 				</LinkContainer>
 			</Container>
