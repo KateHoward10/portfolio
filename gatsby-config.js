@@ -14,7 +14,7 @@ module.exports = {
 				name: "Briz Quiz List",
 				link: "quiz-lister",
 				url: "https://brizquizlist.herokuapp.com",
-				tags: ["Ruby on Rails"],
+				tags: ["Ruby on Rails", "Google Maps"],
 			},
 			{
 				name: "Snek",

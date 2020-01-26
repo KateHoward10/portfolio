@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 
 export const Box = styled.div`
-  width: 20vw;
+  width: 100%;
   border-radius: 5px;
   box-shadow: 0 0 10px grey;
   padding: 10px;
@@ -23,12 +23,11 @@ export const Box = styled.div`
   justify-content: space-between;
   color: ${props => (props.darkMode ? "#fff" : "#000")};
   font-size: 15px;
-  @media screen and (max-width: 900px) {
+  @media screen and (min-width: 500px) {
     width: 32vw;
   }
-  @media screen and (max-width: 500px) {
-    width: 100%;
-    margin: 2vw 8vw;
+  @media screen and (min-width: 900px) {
+    width: 24vw;
   }
 `
 
@@ -39,19 +38,19 @@ export const Link = styled.a`
 `
 
 export const Image = styled(Img)`
-  height: 15vw;
+  height: 50vw;
   object-fit: cover;
-  @media screen and (max-width: 900px) {
+  @media screen and (min-width: 500px) {
     height: 24vw;
   }
-  @media screen and (max-width: 500px) {
-    height: 60vw;
+  @media screen and (min-width: 900px) {
+    height: 18vw;
   }
 `
 
 export const TagContainer = styled.div`
   display: flex;
-  flex-flow: row-wrap;
+  flex-flow: row wrap;
   justify-content: center;
   padding: 5px;
 `
