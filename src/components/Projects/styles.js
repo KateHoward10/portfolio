@@ -14,8 +14,8 @@ export const Box = styled.div`
   border-radius: 5px;
   box-shadow: 0 0 10px grey;
   padding: 10px;
+  margin: 4vw 8vw;
   text-align: center;
-  margin: 15px;
   position: ${props => (props.comingSoon ? "relative" : "static")};
   display: flex;
   flex-direction: column;
@@ -25,6 +25,7 @@ export const Box = styled.div`
   font-size: 15px;
   @media screen and (min-width: 500px) {
     width: 32vw;
+    margin: 15px;
   }
   @media screen and (min-width: 900px) {
     width: 24vw;

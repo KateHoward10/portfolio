@@ -22,6 +22,11 @@ module.exports = {
 				tags: ["ReactJS", "Games"],
 			},
 			{
+				name: "Pairs",
+				link: "pairs",
+				tags: ["ReactJS", "Games", "Audio"],
+			},
+			{
 				name: "Tree Decorator",
 				link: "tree-decorator",
 				tags: ["VanillaJS", "SVGs", "Christmas"],
