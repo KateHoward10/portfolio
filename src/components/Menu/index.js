@@ -12,17 +12,7 @@ import {
 } from "./styles"
 
 const Menu = React.forwardRef(
-	(
-		{
-			darkMode,
-			fromTop,
-			scrollToTop,
-			scrollToProjects,
-			scrollToInfo,
-			scrollToContact,
-		},
-		ref
-	) => {
+	({ darkMode, fromTop, projectsOffset, infoOffset, contactOffset }, ref) => {
 		const [menuOpen, toggleMenuOpen] = useState(false)
 		const data = useStaticQuery(graphql`
 			query {
@@ -33,6 +23,13 @@ const Menu = React.forwardRef(
 				}
 			}
 		`)
+		const position =
+			window.pageYOffset + (ref.current ? ref.current.offsetHeight : 0)
+
+		function scroll(offset) {
+			window.scroll(0, offset)
+			toggleMenuOpen(false)
+		}
 
 		useEffect(() => {
 			if (fromTop < 100) toggleMenuOpen(false)
@@ -45,7 +42,7 @@ const Menu = React.forwardRef(
 				menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
 			>
 				<TitleContainer>
-					<Title onClick={scrollToTop} fromTop={fromTop}>
+					<Title onClick={() => window.scroll(0, 0)} fromTop={fromTop}>
 						{data.site.siteMetadata.author}
 					</Title>
 				</TitleContainer>
@@ -66,25 +63,37 @@ const Menu = React.forwardRef(
 				>
 					<Link
 						menuOpen={menuOpen}
-						onClick={scrollToProjects}
+						onClick={() => scroll(projectsOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
+						active={projectsOffset <= position && position < infoOffset}
 					>
 						<FaLaptopCode /> Projects
 					</Link>
 					<Link
 						menuOpen={menuOpen}
-						onClick={scrollToInfo}
+						onClick={() => scroll(infoOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
+						active={
+							infoOffset <= position &&
+							position < contactOffset &&
+							window.innerHeight + window.pageYOffset <
+								document.body.offsetHeight
+						}
 					>
 						<FaInfoCircle /> Info
 					</Link>
 					<Link
 						menuOpen={menuOpen}
-						onClick={scrollToContact}
+						onClick={() => scroll(contactOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
+						active={
+							contactOffset <= position ||
+							window.innerHeight + window.pageYOffset >=
+								document.body.offsetHeight
+						}
 					>
 						<FaEnvelope /> Contact
 					</Link>

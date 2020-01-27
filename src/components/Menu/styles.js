@@ -82,13 +82,14 @@ export const LinkContainer = styled.div`
 export const Link = styled.a`
 	display: flex;
 	align-items: center;
-	padding: 0 20px;
+	padding: 10px 20px;
 	cursor: pointer;
 	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
 	color: ${props =>
 		props.darkMode ? "#FFF" : `hsl(255, 0%, ${props.fromTop}%)`};
+	border-bottom: ${props => (props.active ? "2px dashed deepskyblue" : "none")};
 	svg {
 		margin-right: 5px;
 	}

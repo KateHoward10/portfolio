@@ -23,10 +23,6 @@ function App() {
 		}
 	}
 
-	function scrollToSection(section) {
-		window.scrollTo(0, section.current.offsetTop - menu.current.offsetHeight)
-	}
-
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 		menuPosition = menu.current.offsetTop
@@ -43,10 +39,16 @@ function App() {
 				ref={menu}
 				darkMode={darkMode}
 				fromTop={fromTop}
-				scrollToTop={() => window.scrollTo(0, 0)}
-				scrollToProjects={() => scrollToSection(projects)}
-				scrollToInfo={() => scrollToSection(other)}
-				scrollToContact={() => scrollToSection(footer)}
+				projectsOffset={
+					projects.current &&
+					projects.current.offsetTop - menu.current.offsetHeight
+				}
+				infoOffset={
+					other.current && other.current.offsetTop - menu.current.offsetHeight
+				}
+				contactOffset={
+					footer.current && footer.current.offsetTop - menu.current.offsetHeight
+				}
 			/>
 			<Projects
 				ref={projects}
