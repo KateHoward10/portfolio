@@ -14,6 +14,7 @@ function App() {
 	const footer = useRef(null)
 	const [fromTop, setFromTop] = useState(0)
 	const [darkMode, setDarkMode] = useState(false)
+	const [scrollPosition, setScrollPosition] = useState(0)
 
 	function handleScroll() {
 		if (menuPosition && window.pageYOffset >= menuPosition) {
@@ -21,6 +22,7 @@ function App() {
 		} else {
 			setFromTop((window.pageYOffset / menuPosition) * 100)
 		}
+		setScrollPosition(window.pageYOffset)
 	}
 
 	useEffect(() => {
@@ -49,6 +51,7 @@ function App() {
 				contactOffset={
 					footer.current && footer.current.offsetTop - menu.current.offsetHeight
 				}
+				scrollPosition={scrollPosition}
 			/>
 			<Projects
 				ref={projects}

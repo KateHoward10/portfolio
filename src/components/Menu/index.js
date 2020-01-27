@@ -12,7 +12,17 @@ import {
 } from "./styles"
 
 const Menu = React.forwardRef(
-	({ darkMode, fromTop, projectsOffset, infoOffset, contactOffset }, ref) => {
+	(
+		{
+			darkMode,
+			fromTop,
+			projectsOffset,
+			infoOffset,
+			contactOffset,
+			scrollPosition,
+		},
+		ref
+	) => {
 		const [menuOpen, toggleMenuOpen] = useState(false)
 		const data = useStaticQuery(graphql`
 			query {
@@ -24,7 +34,7 @@ const Menu = React.forwardRef(
 			}
 		`)
 		const position =
-			window.pageYOffset + (ref.current ? ref.current.offsetHeight : 0)
+			scrollPosition + (ref.current ? ref.current.offsetHeight : 0)
 
 		function scroll(offset) {
 			if (window) window.scroll(0, offset)
