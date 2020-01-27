@@ -8,8 +8,8 @@ export const Container = styled.div`
 			hsla(240, 100%, 36%, 90%),
 			transparent 80%
 		),
-		linear-gradient(217deg, hsla(180, 100%, 36%, 90%), transparent 80%),
-		linear-gradient(336deg, hsla(120, 100%, 36%, 90%), transparent 80%);
+		linear-gradient(217deg, hsla(200, 100%, 36%, 90%), transparent 80%),
+		linear-gradient(336deg, hsla(160, 100%, 36%, 90%), transparent 80%);
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
