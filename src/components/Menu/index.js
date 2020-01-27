@@ -27,7 +27,7 @@ const Menu = React.forwardRef(
 			window.pageYOffset + (ref.current ? ref.current.offsetHeight : 0)
 
 		function scroll(offset) {
-			window.scroll(0, offset)
+			if (window) window.scroll(0, offset)
 			toggleMenuOpen(false)
 		}
 
