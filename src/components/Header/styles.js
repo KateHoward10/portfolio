@@ -8,8 +8,8 @@ export const Container = styled.div`
 			hsla(220, 100%, 50%, 80%),
 			transparent 90%
 		),
-		linear-gradient(217deg, hsla(200, 100%, 40%, 80%), transparent 80%),
-		linear-gradient(336deg, hsla(180, 100%, 40%, 80%), transparent 80%);
+		linear-gradient(217deg, hsla(200, 100%, 40%, 75%), transparent 90%),
+		linear-gradient(336deg, hsla(180, 100%, 40%, 75%), transparent 90%);
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
@@ -25,12 +25,13 @@ export const Image = styled(Img)`
 	height: 60vw;
 	object-fit: cover;
 	border-radius: 50%;
-	margin: 25px;
+	margin: 25px 0 0;
 	@media screen and (min-width: 500px) {
 		width: 200px;
 		height: 200px;
 		float: left;
 		shape-outside: circle(110px);
+		margin: 25px;
 	}
 	@media screen and (min-width: 700px) {
 		shape-outside: circle(120px);
