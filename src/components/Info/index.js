@@ -9,7 +9,7 @@ import {
 	FaBrain,
 } from "react-icons/fa"
 
-const Other = React.forwardRef(({ darkMode }, ref) => (
+const Info = React.forwardRef(({ darkMode }, ref) => (
 	<Box ref={ref} darkMode={darkMode}>
 		<List>
 			<ListItem>
@@ -70,4 +70,4 @@ const Other = React.forwardRef(({ darkMode }, ref) => (
 	</Box>
 ))
 
-export default Other
+export default Info

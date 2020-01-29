@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
-import Other from "../components/Other"
+import Info from "../components/Info"
 import Contact from "../components/Contact"
 import "../App.css"
 
@@ -10,7 +10,7 @@ function App() {
 	const menu = useRef(null)
 	let menuPosition = null
 	const projects = useRef(null)
-	const other = useRef(null)
+	const info = useRef(null)
 	const contact = useRef(null)
 	const [fromTop, setFromTop] = useState(0)
 	const [darkMode, setDarkMode] = useState(false)
@@ -46,7 +46,7 @@ function App() {
 					projects.current.offsetTop - menu.current.offsetHeight
 				}
 				infoOffset={
-					other.current && other.current.offsetTop - menu.current.offsetHeight
+					info.current && info.current.offsetTop - menu.current.offsetHeight
 				}
 				contactOffset={
 					contact.current &&
@@ -60,7 +60,7 @@ function App() {
 				menuFixed={fromTop === 100}
 				menuHeight={menu && menu.current ? menu.current.offsetHeight : 0}
 			/>
-			<Other ref={other} darkMode={darkMode} />
+			<Info ref={info} darkMode={darkMode} />
 			<Contact ref={contact} />
 		</div>
 	)
