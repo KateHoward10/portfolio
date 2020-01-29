@@ -82,7 +82,8 @@ export const LinkContainer = styled.div`
 export const Link = styled.a`
 	display: flex;
 	align-items: center;
-	padding: 10px 20px;
+	padding: 10px 10px;
+	margin 0 10px;
 	cursor: pointer;
 	font-family: monospace;
 	font-size: 16px;
@@ -98,6 +99,8 @@ export const Link = styled.a`
 			props.menuOpen &&
 			css`
 				padding: 10px 0;
+				border-bottom: none;
+				color: ${props => (props.active ? "deepskyblue" : "#FFF")};
 			`}
 	}
 `

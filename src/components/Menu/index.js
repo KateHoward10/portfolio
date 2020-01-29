@@ -100,7 +100,7 @@ const Menu = React.forwardRef(
 						fromTop={fromTop}
 						darkMode={darkMode}
 						active={
-							contactOffset <= position ||
+							(contactOffset && contactOffset <= position) ||
 							window.innerHeight + window.pageYOffset >=
 								document.body.offsetHeight
 						}
