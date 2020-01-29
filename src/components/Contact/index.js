@@ -28,11 +28,11 @@ const Contact = React.forwardRef((props, ref) => {
 					>
 						<input type="hidden" name="form-name" value="contact" />
 						<InputContainer>
-							<Input placeholder="Name" required />
-							<Input placeholder="Email" type="email" required />
+							<Input name="name" placeholder="Name" required />
+							<Input name="email" placeholder="Email" type="email" required />
 						</InputContainer>
 						<InputContainer>
-							<TextInput placeholder="Message" required />
+							<TextInput name="message" placeholder="Message" required />
 						</InputContainer>
 						<ButtonContainer>
 							<Button type="submit">Send</Button>
