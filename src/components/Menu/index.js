@@ -52,7 +52,7 @@ const Menu = React.forwardRef(
 				menuHeight={ref && ref.current ? ref.current.offsetHeight : 0}
 			>
 				<TitleContainer>
-					<Title onClick={() => window.scroll(0, 0)} fromTop={fromTop}>
+					<Title onClick={() => scroll(0)} fromTop={fromTop}>
 						{data.site.siteMetadata.author}
 					</Title>
 				</TitleContainer>
@@ -88,6 +88,7 @@ const Menu = React.forwardRef(
 						active={
 							infoOffset <= position &&
 							position < contactOffset &&
+							window &&
 							window.innerHeight + window.pageYOffset <
 								document.body.offsetHeight
 						}
@@ -101,8 +102,9 @@ const Menu = React.forwardRef(
 						darkMode={darkMode}
 						active={
 							(contactOffset && contactOffset <= position) ||
-							window.innerHeight + window.pageYOffset >=
-								document.body.offsetHeight
+							(window &&
+								window.innerHeight + window.pageYOffset >=
+									document.body.offsetHeight)
 						}
 					>
 						<FaEnvelope /> Contact
