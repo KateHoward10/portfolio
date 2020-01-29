@@ -3,7 +3,7 @@ import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Projects from "../components/Projects"
 import Other from "../components/Other"
-import Footer from "../components/Footer"
+import Contact from "../components/Contact"
 import "../App.css"
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 	let menuPosition = null
 	const projects = useRef(null)
 	const other = useRef(null)
-	const footer = useRef(null)
+	const contact = useRef(null)
 	const [fromTop, setFromTop] = useState(0)
 	const [darkMode, setDarkMode] = useState(false)
 	const [scrollPosition, setScrollPosition] = useState(0)
@@ -49,7 +49,8 @@ function App() {
 					other.current && other.current.offsetTop - menu.current.offsetHeight
 				}
 				contactOffset={
-					footer.current && footer.current.offsetTop - menu.current.offsetHeight
+					contact.current &&
+					contact.current.offsetTop - menu.current.offsetHeight
 				}
 				scrollPosition={scrollPosition}
 			/>
@@ -60,7 +61,7 @@ function App() {
 				menuHeight={menu && menu.current ? menu.current.offsetHeight : 0}
 			/>
 			<Other ref={other} darkMode={darkMode} />
-			<Footer ref={footer} />
+			<Contact ref={contact} />
 		</div>
 	)
 }

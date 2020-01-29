@@ -4,6 +4,7 @@ export const Container = styled.div`
   position: relative;
   background-color: #011e4c;
   padding: 5vw;
+  width: 100%;
 `
 
 export const Text = styled.p`
@@ -13,28 +14,33 @@ export const Text = styled.p`
 
 export const InputContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   width: 90vw;
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
+  @media screen and (min-width: 540px) {
+    flex-direction: row;
   }
 `
 
 export const Input = styled.input`
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
   flex: 0.5;
+  font-family: monospace, sans-serif;
 `
 
 export const TextInput = styled.textarea`
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
   flex: 1;
   height: 10vw;
-  font-family: "Helvetica Neue";
+  font-family: monospace, sans-serif;
 `
 
 export const ButtonContainer = styled.div`
@@ -45,7 +51,17 @@ export const ButtonContainer = styled.div`
 `
 
 export const Button = styled.button`
-  padding: 5px;
+  width: 100%;
+  padding: 10px 20px;
   margin: 10px;
+  border-radius: 20px;
+  border: none;
+  background: deepskyblue;
+  color: #fff;
   font-size: 16px;
+  font-family: monospace, sans-serif;
+  cursor: pointer;
+  @media screen and (min-width: 500px) {
+    width: initial;
+  }
 `
