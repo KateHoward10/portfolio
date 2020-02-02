@@ -20,6 +20,7 @@ const Menu = React.forwardRef(
 			infoOffset,
 			contactOffset,
 			scrollPosition,
+			activeSection,
 		},
 		ref
 	) => {
@@ -33,8 +34,6 @@ const Menu = React.forwardRef(
 				}
 			}
 		`)
-		const position =
-			scrollPosition + (ref.current ? ref.current.offsetHeight : 0)
 
 		function scroll(offset) {
 			if (window) window.scroll(0, offset)
@@ -76,7 +75,7 @@ const Menu = React.forwardRef(
 						onClick={() => scroll(projectsOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
-						active={projectsOffset <= position && position < infoOffset}
+						active={activeSection === "Projects"}
 					>
 						<FaLaptopCode /> Projects
 					</Link>
@@ -85,13 +84,7 @@ const Menu = React.forwardRef(
 						onClick={() => scroll(infoOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
-						active={
-							infoOffset <= position &&
-							position < contactOffset &&
-							window &&
-							window.innerHeight + window.pageYOffset <
-								document.body.offsetHeight
-						}
+						active={activeSection === "Info"}
 					>
 						<FaInfoCircle /> Info
 					</Link>
@@ -100,13 +93,7 @@ const Menu = React.forwardRef(
 						onClick={() => scroll(contactOffset)}
 						fromTop={fromTop}
 						darkMode={darkMode}
-						active={
-							window &&
-							window.pageYOffset > 0 &&
-							((contactOffset && contactOffset <= position) ||
-								window.innerHeight + window.pageYOffset >=
-									document.body.offsetHeight)
-						}
+						active={activeSection === "Contact"}
 					>
 						<FaEnvelope /> Contact
 					</Link>

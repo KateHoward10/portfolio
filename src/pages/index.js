@@ -14,7 +14,14 @@ function App() {
 	const contact = useRef(null)
 	const [fromTop, setFromTop] = useState(0)
 	const [darkMode, setDarkMode] = useState(false)
-	const [scrollPosition, setScrollPosition] = useState(0)
+	const [position, setPosition] = useState(0)
+	const [activeSection, setActiveSection] = useState(null)
+
+	function getOffset(section) {
+		return section.current
+			? section.current.offsetTop - menu.current.offsetHeight
+			: null
+	}
 
 	function handleScroll() {
 		if (menuPosition && window.pageYOffset >= menuPosition) {
@@ -22,7 +29,22 @@ function App() {
 		} else {
 			setFromTop((window.pageYOffset / menuPosition) * 100)
 		}
-		setScrollPosition(window.pageYOffset)
+		const newPosition =
+			window.pageYOffset + (menu.current ? menu.current.offsetHeight : 0)
+		setPosition(newPosition)
+		if (getOffset(projects) <= newPosition && newPosition < getOffset(info)) {
+			setActiveSection("Projects")
+		} else if (
+			getOffset(info) <= newPosition &&
+			newPosition < getOffset(contact) &&
+			window.innerHeight + window.pageYOffset < document.body.offsetHeight
+		) {
+			setActiveSection("Info")
+		} else if (
+			getOffset(contact) <= newPosition ||
+			window.innerHeight + window.pageYOffset >= document.body.offsetHeight
+		)
+			setActiveSection("Contact")
 	}
 
 	useEffect(() => {
@@ -41,18 +63,10 @@ function App() {
 				ref={menu}
 				darkMode={darkMode}
 				fromTop={fromTop}
-				projectsOffset={
-					projects.current &&
-					projects.current.offsetTop - menu.current.offsetHeight
-				}
-				infoOffset={
-					info.current && info.current.offsetTop - menu.current.offsetHeight
-				}
-				contactOffset={
-					contact.current &&
-					contact.current.offsetTop - menu.current.offsetHeight
-				}
-				scrollPosition={scrollPosition}
+				projectsOffset={getOffset(projects)}
+				infoOffset={getOffset(info)}
+				contactOffset={getOffset(contact)}
+				activeSection={activeSection}
 			/>
 			<Projects
 				ref={projects}
