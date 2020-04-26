@@ -16,7 +16,6 @@ export const Box = styled.div`
   padding: 10px;
   margin: 4vw 8vw;
   text-align: center;
-  position: ${props => (props.comingSoon ? "relative" : "static")};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +40,11 @@ export const Link = styled.a`
 export const Image = styled(Img)`
   height: 50vw;
   object-fit: cover;
+  filter: brightness(90%);
+  ${Link}:hover & {
+    filter: brightness(100%);
+    transition: filter 1s;
+  }
   @media screen and (min-width: 500px) {
     height: 24vw;
   }

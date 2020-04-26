@@ -30,7 +30,6 @@ function App() {
         }
         const newPosition =
             window.pageYOffset + (menu.current ? menu.current.offsetHeight : 0)
-        setPosition(newPosition)
         if (getOffset(projects) <= newPosition && newPosition < getOffset(info)) {
             setActiveSection("Projects")
         } else if (

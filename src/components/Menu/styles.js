@@ -90,7 +90,10 @@ export const Link = styled.a`
 	font-weight: bold;
 	color: ${props =>
 		props.darkMode ? "#FFF" : `hsl(255, 0%, ${props.fromTop}%)`};
-	border-bottom: ${props => (props.active ? "2px dashed deepskyblue" : "none")};
+  border-bottom: ${props => (props.active ? "2px dashed deepskyblue" : "none")};
+  &:hover {
+    color: deepskyblue;
+  }
 	svg {
 		margin-right: 5px;
 	}

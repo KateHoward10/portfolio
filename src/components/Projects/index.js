@@ -60,7 +60,6 @@ const Projects = React.forwardRef(
 					return (
 						<Box
 							key={index}
-							comingSoon={project.comingSoon}
 							darkMode={darkMode}
 						>
 							<Link
