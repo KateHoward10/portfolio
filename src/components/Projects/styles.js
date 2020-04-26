@@ -6,6 +6,8 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 980px;
+  margin: auto;
   margin-top: ${props => (props.menuFixed ? props.menuHeight + 42 : 42)}px;
 `
 
@@ -27,7 +29,7 @@ export const Box = styled.div`
     margin: 15px;
   }
   @media screen and (min-width: 900px) {
-    width: 24vw;
+    width: 20vw;
   }
 `
 
@@ -49,7 +51,7 @@ export const Image = styled(Img)`
     height: 24vw;
   }
   @media screen and (min-width: 900px) {
-    height: 18vw;
+    height: 15vw;
   }
 `
 

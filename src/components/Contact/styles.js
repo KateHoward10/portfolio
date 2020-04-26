@@ -3,8 +3,13 @@ import styled from "styled-components"
 export const Container = styled.div`
   position: relative;
   background-color: #011e4c;
-  padding: 5vw;
   width: 100%;
+`
+
+export const FormContainer = styled.div`
+  max-width: 980px;
+  margin: auto;
+  padding: 4vw 6vw;
 `
 
 export const Text = styled.p`
@@ -16,7 +21,6 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90vw;
   @media screen and (min-width: 540px) {
     flex-direction: row;
   }
@@ -47,7 +51,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 90vw;
 `
 
 export const Button = styled.button`
