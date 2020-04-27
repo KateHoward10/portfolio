@@ -17,6 +17,11 @@ module.exports = {
 				tags: ["Ruby on Rails", "Google Maps"],
 			},
 			{
+				name: "Countdown",
+				link: "countdown",
+				tags: ["ReactJS", "Games"],
+			},
+			{
 				name: "Snek",
 				link: "snek",
 				tags: ["ReactJS", "Games"],
@@ -42,9 +47,9 @@ module.exports = {
 				tags: ["ReactJS", "TypeScript", "Games"],
 			},
 			{
-				name: "Countdown",
-				link: "countdown",
-				tags: ["ReactJS", "Games"],
+				name: "Ukulele Tuner",
+				link: "ukulele-tuner",
+				tags: ["Vue.js", "Web Audio API"],
 			},
 			{
 				name: "Su Doku",
