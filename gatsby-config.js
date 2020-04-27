@@ -3,7 +3,7 @@ module.exports = {
 		title: "Kate Howard",
 		author: "Kate Howard",
 		intro:
-			"I am a front end developer based in Bristol, working mostly with React and React Native. This is where my personal projects live.",
+			"I am a front end developer based in Bristol, working mostly with React and React Native. I also have some experience with Ruby on Rails. This is where my personal projects live.",
 		projects: [
 			{
 				name: "Music Connections Quiz",
@@ -32,14 +32,14 @@ module.exports = {
 				tags: ["VanillaJS", "SVGs", "Christmas"],
 			},
 			{
-				name: "Water Works",
-				link: "water-works",
-				tags: ["ReactJS"],
-			},
-			{
 				name: "Games with Lines",
 				link: "games-with-lines",
 				tags: ["ReactJS", "Games"],
+			},
+			{
+				name: "Typing Speed Test",
+				link: "typing-speed-test",
+				tags: ["ReactJS", "TypeScript", "Games"],
 			},
 			{
 				name: "Countdown",
@@ -50,6 +50,11 @@ module.exports = {
 				name: "Su Doku",
 				link: "sudoku",
 				tags: ["ReactJS", "Games", "Puzzles"],
+			},
+			{
+				name: "Water Works",
+				link: "water-works",
+				tags: ["ReactJS"],
 			},
 		],
 	},

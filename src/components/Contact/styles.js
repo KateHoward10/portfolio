@@ -45,6 +45,7 @@ export const TextInput = styled.textarea`
   flex: 1;
   height: 10vw;
   font-family: monospace, sans-serif;
+  resize: none;
 `
 
 export const ButtonContainer = styled.div`

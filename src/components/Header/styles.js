@@ -14,7 +14,7 @@ export const Container = styled.div`
 	flex-direction: row;
 	padding: 20px;
 	width: 100%;
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 520px) {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -45,7 +45,7 @@ export const TextContainer = styled.div`
 	color: ${({ darkMode }) => (darkMode ? "white" : "black")};
 	margin: 20px;
 	text-align: center;
-	@media screen and (min-width: 500px) {
+	@media screen and (min-width: 520px) {
 		display: block;
 		text-align: left;
 	}
