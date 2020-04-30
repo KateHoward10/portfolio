@@ -71,6 +71,12 @@ module.exports = {
 			options: {
 				path: `${__dirname}/src/`,
 			},
-		},
+    },
+    {
+      resolve: `gatsby-plugin-emoji-favicon`,
+      options: {
+        emoji: '📖'
+      }
+    }
 	],
 }
