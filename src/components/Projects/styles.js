@@ -3,12 +3,61 @@ import Img from "gatsby-image"
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: wrap;
   max-width: 980px;
   margin: auto;
   margin-top: ${props => (props.menuFixed ? props.menuHeight + 42 : 42)}px;
+`
+
+export const FilterContainer = styled.div`
+  width: 100%;
+  margin: 0 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+`
+
+export const FilterButton = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+  margin: 4px;
+  background-color: #ddd;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: inset 0 0 10px lightgrey;
+  }
+  @media screen and (min-width: 500px) {
+    width: 360px;
+  }
+`
+
+export const FilterList = styled.ul`
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  background-color: #eee;
+  box-shadow: 0 0 10px grey;
+  position: absolute;
+  z-index: 20;
+  top: 16px;
+  @media screen and (min-width: 500px) {
+    width: 360px;
+  }
+`
+
+export const Filter = styled.li`
+  cursor: pointer;
+  padding: 4px;
+  background-color: ${props => props.selected ? "deepskyblue" : "transparent"};
+  &:hover {
+    background-color: deepskylue;
+  }
 `
 
 export const Box = styled.div`
@@ -68,6 +117,8 @@ export const Tag = styled.div`
   padding: 5px;
   margin: 5px;
   font-size: 12px;
+  display: flex;
+  align-items: center;
 `
 
 export const CodeLink = styled.a`
