@@ -67,7 +67,7 @@ const Projects = React.forwardRef(
 				menuHeight={menuHeight}
 			>
         <FilterContainer>
-          <FilterButton onClick={() => toggleFilters(!showFilters)}><span>Select tags to filter projects </span>{showFilters ? <FaChevronUp /> : <FaChevronDown />}</FilterButton>
+          <FilterButton onClick={() => toggleFilters(!showFilters)}><span>Filter projects </span>{showFilters ? <FaChevronUp /> : <FaChevronDown />}</FilterButton>
           {showFilters && (
             <FilterList>
               {tags.map((tag, index) => (
@@ -77,7 +77,7 @@ const Projects = React.forwardRef(
           )}
           <TagContainer>
             {filters.map((filter, index) => (
-              <Tag key={index}>{filter} <FaTimes onClick={() => setFilters(filters.filter(f => f !== filter))} /></Tag>
+              <Tag key={index}>{filter} <FaTimes onClick={() => setFilters(filters.filter(f => f !== filter))} style={{ paddingLeft: '2px' }} /></Tag>
             ))}
           </TagContainer>
         </FilterContainer>
