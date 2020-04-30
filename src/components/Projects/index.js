@@ -51,8 +51,8 @@ const Projects = React.forwardRef(
 		`)
 		const projects = data.site.siteMetadata.projects
     const projectImages = data.allFile.edges
-    const allTags = projects.map(project => project.tags).flat()
-    const tags = [...new Set(allTags)]
+    const allTags = projects.map(project => project.tags)
+    const tags = [...new Set([].concat(...allTags))].sort()
 
     function selectFilter(filter) {
       toggleFilters(false);
