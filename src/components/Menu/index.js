@@ -39,7 +39,7 @@ const Menu = React.forwardRef(
 		}
 
 		useEffect(() => {
-			if (fromTop < 100) toggleMenuOpen(false)
+			if (fromTop < 60) toggleMenuOpen(false)
 		}, [fromTop, toggleMenuOpen])
 
 		return (
@@ -58,7 +58,6 @@ const Menu = React.forwardRef(
 						<Bar
 							key={index}
 							index={index}
-							fromTop={fromTop}
 							menuOpen={menuOpen}
 						/>
 					))}

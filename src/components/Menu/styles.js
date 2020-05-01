@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components"
 
 export const Container = styled.nav`
-	width: 100%;
+  width: 100%;
+  position: relative;
 	${props =>
 		props.fromTop === 100 &&
 		css`
@@ -43,7 +44,7 @@ export const Bar = styled.div`
 	height: 4px;
 	width: 24px;
 	margin: 4px;
-	background-color: rgb(255, 255, 255, ${props => props.fromTop}%);
+	background-color: #fff;
 	transition: 0.5s;
 	${props =>
 		props.menuOpen &&
@@ -61,20 +62,23 @@ export const LinkContainer = styled.div`
 	position: absolute;
 	left: ${props => props.fromTop / 2 + 50}%;
 	transform: translateX(${props => -(props.fromTop / 2 + 50)}%);
+  transition: opacity 0.5s;
 	@media screen and (max-width: 500px) {
 		${props =>
 			props.menuOpen
-				? css`
+        ? css`
+            visiblity: visible;
+            opacity: 1;
 						display: flex;
 						flex-direction: column;
 						width: 100%;
 						align-items: center;
-						position: absolute;
 						background-color: hsl(240, 100%, 36%);
 						top: ${props => props.menuHeight}px;
 				  `
 				: css`
-						display: none;
+            visibility: hidden;
+            opacity: 0;
 				  `}
 	}
 `
