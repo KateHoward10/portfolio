@@ -11,12 +11,12 @@ export const Container = styled.div`
 		linear-gradient(217deg, hsla(200, 100%, 40%, 75%), transparent 90%),
 		linear-gradient(336deg, hsla(180, 100%, 40%, 75%), transparent 90%);
 	display: flex;
-	flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+	max-width: 100%;
 	padding: 20px;
-	width: 100%;
-	@media screen and (max-width: 520px) {
-		flex-direction: column;
-		align-items: center;
+	@media screen and (min-width: 520px) {
+    flex-direction: row;
 	}
 `
 
@@ -42,11 +42,11 @@ export const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 20px;
-	text-align: center;
+  text-align: center;
 	@media screen and (min-width: 520px) {
 		display: block;
 		text-align: left;
+	  margin: 20px;
 	}
 `
 
