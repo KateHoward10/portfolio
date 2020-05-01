@@ -1,19 +1,6 @@
-body {
-  margin: 0;
-  font-family: monospace, sans-serif;
-}
-
 a {
   color: deepskyblue;
   text-decoration: none;
-}
-
-.portfolio {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .success-notification {

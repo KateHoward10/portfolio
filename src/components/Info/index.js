@@ -9,8 +9,8 @@ import {
 	FaBrain,
 } from "react-icons/fa"
 
-const Info = React.forwardRef(({ darkMode }, ref) => (
-	<Box ref={ref} darkMode={darkMode}>
+const Info = React.forwardRef((props, ref) => (
+	<Box ref={ref}>
 		<List>
 			<ListItem>
 				<IconContainer>

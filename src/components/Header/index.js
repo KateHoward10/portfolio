@@ -4,15 +4,10 @@ import {
 	Container,
 	TextContainer,
 	Image,
-	Intro,
-	ToggleContainer,
-	Toggle,
-	Hidden,
-	Slider,
+	Intro
 } from "./styles"
-import { FaSun, FaMoon } from "react-icons/fa"
 
-const Header = ({ darkMode, setDarkMode }) => {
+const Header = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			site {
@@ -33,24 +28,13 @@ const Header = ({ darkMode, setDarkMode }) => {
 
 	return (
 		<Container>
-			<TextContainer darkMode={darkMode}>
+			<TextContainer>
 				<Image fluid={data.me.childImageSharp.fluid} alt="Me" />
 				<Intro>
 					<h1>{data.site.siteMetadata.author}</h1>
 					<p>{data.site.siteMetadata.intro}</p>
 				</Intro>
 			</TextContainer>
-			<ToggleContainer>
-				<FaSun color="gold" />
-				<Toggle darkMode={darkMode}>
-					<Hidden
-						type="checkbox"
-						onChange={e => setDarkMode(e.target.checked)}
-					/>
-					<Slider darkMode={darkMode} />
-				</Toggle>
-				<FaMoon color="gold" />
-			</ToggleContainer>
 		</Container>
 	)
 }

@@ -8,7 +8,7 @@ export const Container = styled.nav`
 			position: fixed;
 			top: 0;
 		`}
-	background-color: hsla(240, 100%, 36%, ${props => props.fromTop}%);
+	background-color: hsl(240, 100%, 36%);
 	display: flex;
 	padding: 20px 0;
 	flex-direction: row;
@@ -43,7 +43,7 @@ export const Bar = styled.div`
 	height: 4px;
 	width: 24px;
 	margin: 4px;
-	background-color: rgba(255, 255, 255, ${props => props.fromTop}%);
+	background-color: rgb(255, 255, 255, ${props => props.fromTop}%);
 	transition: 0.5s;
 	${props =>
 		props.menuOpen &&
@@ -88,8 +88,7 @@ export const Link = styled.a`
 	font-family: monospace;
 	font-size: 16px;
 	font-weight: bold;
-	color: ${props =>
-		props.darkMode ? "#FFF" : `hsl(255, 0%, ${props.fromTop}%)`};
+	color: #fff;
   border-bottom: ${props => (props.active ? "2px dashed deepskyblue" : "none")};
   &:hover {
     color: deepskyblue;

@@ -27,10 +27,10 @@ export const FilterButton = styled.div`
   cursor: pointer;
   padding: 5px;
   margin: 4px;
-  background-color: #ddd;
   border-radius: 5px;
+  box-shadow: inset 0 0 10px lightgrey;
   &:hover {
-    box-shadow: inset 0 0 10px lightgrey;
+    box-shadow: inset 0 0 10px grey;
   }
   @media screen and (min-width: 500px) {
     width: 360px;
@@ -41,7 +41,6 @@ export const FilterList = styled.ul`
   width: 100%;
   list-style: none;
   padding: 0;
-  background-color: #eee;
   box-shadow: 0 0 10px grey;
   position: absolute;
   z-index: 20;
@@ -71,7 +70,6 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: ${props => (props.darkMode ? "#fff" : "#000")};
   font-size: 15px;
   @media screen and (min-width: 500px) {
     width: 32vw;
@@ -83,8 +81,6 @@ export const Box = styled.div`
 `
 
 export const Link = styled.a`
-  text-decoration: none;
-  color: ${props => (props.darkMode ? "#fff" : "#000")};
   width: 100%;
 `
 
@@ -122,8 +118,6 @@ export const Tag = styled.div`
 `
 
 export const CodeLink = styled.a`
-  text-decoration: none;
-  color: ${props => (props.darkMode ? "#fff" : "#000")};
   margin: 10px;
   display: flex;
   align-items: center;

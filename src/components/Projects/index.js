@@ -16,7 +16,7 @@ import {
 import { FaCode, FaTimes, FaChevronUp, FaChevronDown } from "react-icons/fa"
 
 const Projects = React.forwardRef(
-	({ darkMode, menuFixed, menuHeight }, ref) => {
+	({ menuFixed, menuHeight }, ref) => {
     const [filters, setFilters] = useState([])
     const [showFilters, toggleFilters] = useState(false)
 		const data = useStaticQuery(graphql`
@@ -62,7 +62,6 @@ const Projects = React.forwardRef(
 		return (
 			<Container
 				ref={ref}
-				darkMode={darkMode}
 				menuFixed={menuFixed}
 				menuHeight={menuHeight}
 			>
@@ -88,17 +87,14 @@ const Projects = React.forwardRef(
 						item => item.node.name === project.link
 					)
 					return (
-						<Box
-							key={index}
-							darkMode={darkMode}
-						>
+						<Box key={index}>
 							<Link
 								href={
 									project.url ||
 									`https://katehoward10.github.io/${project.link}/`
 								}
 								target="_blank"
-								darkMode={darkMode}
+								className="project-link"
 							>
 								<h3>{project.name}</h3>
 								<Image
@@ -116,7 +112,7 @@ const Projects = React.forwardRef(
 							<CodeLink
 								href={`https://github.com/katehoward10/${project.link}`}
 								target="_blank"
-								darkMode={darkMode}
+								className="project-link"
 							>
 								<FaCode style={{ marginRight: "8px" }} />
 								See code

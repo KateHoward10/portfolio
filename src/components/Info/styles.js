@@ -5,8 +5,6 @@ export const Box = styled.div`
 	border-radius: 5px;
 	margin: 4vw 8vw;
 	padding: 20px;
-	background-color: ${props => (props.darkMode ? "#111" : "#eee")};
-  color: ${props => (props.darkMode ? "#fff" : "#000")};
   max-width: 920px;
 `
 
