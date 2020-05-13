@@ -22,6 +22,12 @@ module.exports = {
 				tags: ["ReactJS", "Games"],
 			},
 			{
+				name: "Flags of the World",
+        link: "flags-of-the-world",
+        url: "https://flagsoftheworld.herokuapp.com",
+				tags: ["ReactJS", "Quiz", "Express"],
+			},
+			{
 				name: "Snek",
 				link: "snek",
 				tags: ["ReactJS", "Games"],
