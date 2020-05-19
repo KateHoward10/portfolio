@@ -2,17 +2,17 @@ import React from "react"
 import {
   Container,
   FormContainer,
-	Text,
-	InputContainer,
-	Input,
-	TextInput,
-	ButtonContainer,
-	Button,
+  Text,
+  InputContainer,
+  Input,
+  TextInput,
+  ButtonContainer,
+  Button,
 } from "./styles"
 
 const Contact = React.forwardRef((props, ref) => {
-	return (
-		<Container ref={ref}>
+  return (
+    <Container ref={ref}>
       <FormContainer>
         <Text>Send me a message here</Text>
         <form
@@ -35,8 +35,8 @@ const Contact = React.forwardRef((props, ref) => {
           </ButtonContainer>
         </form>
       </FormContainer>
-		</Container>
-	)
+    </Container>
+  )
 })
 
 export default Contact
