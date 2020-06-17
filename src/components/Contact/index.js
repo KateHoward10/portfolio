@@ -22,7 +22,7 @@ const Contact = React.forwardRef((props, ref) => {
           data-netlify-honeypot="bot-field"
           action="/success"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact" aria-label="contact" />
           <InputContainer>
             <Input name="name" placeholder="Name" required />
             <Input name="email" placeholder="Email" type="email" required />
