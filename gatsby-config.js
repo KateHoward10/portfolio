@@ -25,12 +25,18 @@ module.exports = {
 				name: "Flags of the World",
         link: "flags-of-the-world",
         url: "https://flagsoftheworld.herokuapp.com",
-				tags: ["ReactJS", "Quiz", "Express"],
+				tags: ["ReactJS", "Quiz", "Express", "WebSockets"],
 			},
 			{
 				name: "Snek",
 				link: "snek",
 				tags: ["ReactJS", "Games"],
+			},
+			{
+				name: "Hangman",
+				link: "hangman",
+        url: "https://vue-hangman.herokuapp.com",
+				tags: ["Vue.js", "Express", "WebSockets", "Games"],
 			},
 			{
 				name: "Pairs",
