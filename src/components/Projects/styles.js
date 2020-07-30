@@ -122,6 +122,7 @@ export const CodeLink = styled.a`
   display: flex;
   align-items: center;
   &:hover {
-    color: deepskyblue;
+    background-color: deepskyblue;
+    transition: background-color 0.5s;
   }
 `

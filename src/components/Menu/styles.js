@@ -93,20 +93,15 @@ export const Link = styled.a`
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  border-bottom: ${props => (props.active ? "2px dashed deepskyblue" : "none")};
   &:hover {
-    color: deepskyblue;
+    background-color: deepskyblue;
+    color: #011e4c;
+    transition: background-color 0.5s;
   }
   svg {
     margin-right: 5px;
   }
-  @media screen and (max-width: 500px) {
-    ${props =>
-      props.menuOpen &&
-      css`
-        padding: 10px 0;
-        border-bottom: none;
-        color: ${props => (props.active ? "deepskyblue" : "#FFF")};
-      `}
+  @media screen and (min-width: 500px) {
+    border-bottom: ${props => (props.active ? "2px solid deepskyblue" : "none")};
   }
 `
