@@ -39,8 +39,8 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 240) {
-                ...GatsbyImageSharpFluid
+              sizes(maxWidth: 240) {
+                ...GatsbyImageSharpSizes
               }
             }
           }
@@ -117,7 +117,7 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
               >
                 <h3>{project.name}</h3>
                 <Image
-                  sizes={image.node.childImageSharp.sizes}
+                  fluid={image.node.childImageSharp.sizes}
                   alt={project.name}
                 />
               </Link>
