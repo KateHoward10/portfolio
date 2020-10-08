@@ -113,7 +113,7 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
                   `https://katehoward10.github.io/${project.link}/`
                 }
                 target="_blank"
-                className="project-link"
+                className="link"
               >
                 <h3>{project.name}</h3>
                 <Image
@@ -131,7 +131,7 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
               <CodeLink
                 href={`https://github.com/katehoward10/${project.link}`}
                 target="_blank"
-                className="project-link"
+                className="link"
               >
                 <FaCode style={{ marginRight: "8px" }} />
                 See code

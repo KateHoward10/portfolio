@@ -47,7 +47,6 @@ export const Text = styled.span`
   flex: 1;
   margin-left: 10px;
   a {
-    color: #000;
     border-bottom: 2px dashed deepskyblue;
     &:hover {
       background-color: deepskyblue;

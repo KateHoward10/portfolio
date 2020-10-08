@@ -18,7 +18,7 @@ const Info = React.forwardRef((props, ref) => (
         </IconContainer>
         <Text>
           In March 2018 I completed an intensive coding bootcamp at{" "}
-          <a href="https://developme.training/">DevelopMe Training</a>.
+          <a className="link" href="https://developme.training/">DevelopMe Training</a>.
         </Text>
       </ListItem>
       <ListItem>
@@ -26,7 +26,7 @@ const Info = React.forwardRef((props, ref) => (
           <FaLaptop color="red" />
         </IconContainer>
         <Text>
-          I currently work at <a href="https://simpleweb.co.uk/">Simpleweb</a>{" "}
+          I currently work at <a className="link" href="https://simpleweb.co.uk/">Simpleweb</a>{" "}
           in Bedminster.
         </Text>
       </ListItem>
@@ -53,7 +53,7 @@ const Info = React.forwardRef((props, ref) => (
         </IconContainer>
         <Text>
           From about Oct ’16 to Sept ’17 I used to read the news on{" "}
-          <a href="https://bcfmradio.com/">BCfm</a>
+          <a className="link" href="https://bcfmradio.com/">BCfm</a>
           ’s breakfast show.
         </Text>
       </ListItem>

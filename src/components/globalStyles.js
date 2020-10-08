@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   ul {
     background-color: ${({ theme }) => theme.body};
   }
-  a.project-link {
+  a.link {
     color: ${({ theme }) => theme.text};
   }
 `
