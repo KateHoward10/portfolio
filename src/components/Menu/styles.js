@@ -102,6 +102,7 @@ export const Link = styled.a`
     margin-right: 5px;
   }
   @media screen and (min-width: 500px) {
-    border-bottom: ${props => (props.active ? "2px solid deepskyblue" : "none")};
+    border-bottom: ${props =>
+      props.active ? "2px solid deepskyblue" : "none"};
   }
 `

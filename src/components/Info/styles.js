@@ -4,11 +4,21 @@ export const Box = styled.div`
   max-width: 100vw;
   padding: 20px;
   padding-top: 20%;
-  background: linear-gradient(32deg, hsla(210, 100%, 70%, 10%) 55%, hsla(220, 100%, 70%, 15%) 45%), linear-gradient(154deg, transparent 70%, hsla(210, 100%, 70%, 15%) 30%);
+  background: linear-gradient(
+      32deg,
+      hsla(210, 100%, 70%, 10%) 55%,
+      hsla(220, 100%, 70%, 15%) 45%
+    ),
+    linear-gradient(154deg, transparent 70%, hsla(210, 100%, 70%, 15%) 30%);
   clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
-	@media screen and (min-width: 420px) {
+  @media screen and (min-width: 420px) {
     padding-top: 30px;
-    background: linear-gradient(9deg, hsla(210, 100%, 70%, 10%) 50%, hsla(220, 100%, 70%, 15%) 40%), linear-gradient(174deg, transparent 70%, hsla(210, 100%, 70%, 15%) 30%);
+    background: linear-gradient(
+        9deg,
+        hsla(210, 100%, 70%, 10%) 50%,
+        hsla(220, 100%, 70%, 15%) 40%
+      ),
+      linear-gradient(174deg, transparent 70%, hsla(210, 100%, 70%, 15%) 30%);
     clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
   }
 `

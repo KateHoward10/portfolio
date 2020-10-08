@@ -13,13 +13,7 @@ import {
 
 const Menu = React.forwardRef(
   (
-    {
-      fromTop,
-      projectsOffset,
-      infoOffset,
-      contactOffset,
-      activeSection,
-    },
+    { fromTop, projectsOffset, infoOffset, contactOffset, activeSection },
     ref
   ) => {
     const [menuOpen, toggleMenuOpen] = useState(false)
@@ -55,11 +49,7 @@ const Menu = React.forwardRef(
         </TitleContainer>
         <MenuIcon onClick={() => toggleMenuOpen(!menuOpen)}>
           {Array.from([0, 1, 2], index => (
-            <Bar
-              key={index}
-              index={index}
-              menuOpen={menuOpen}
-            />
+            <Bar key={index} index={index} menuOpen={menuOpen} />
           ))}
         </MenuIcon>
         <LinkContainer

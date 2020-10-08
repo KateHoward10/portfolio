@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components"
 import { useDarkMode } from "../components/useDarkMode"
-import { GlobalStyles } from "../components/globalStyles";
+import { GlobalStyles } from "../components/globalStyles"
 import { lightTheme, darkTheme } from "../components/Themes"
 import ModeToggle from "../components/ModeToggle"
 import Header from "../components/Header"
@@ -33,7 +33,8 @@ function App() {
     } else {
       setFromTop((window.pageYOffset / menuPosition) * 100)
     }
-    const newPosition = window.pageYOffset + (menu.current ? menu.current.offsetHeight : 0)
+    const newPosition =
+      window.pageYOffset + (menu.current ? menu.current.offsetHeight : 0)
     if (getOffset(projects) <= newPosition && newPosition < getOffset(info)) {
       setActiveSection("Projects")
     } else if (
@@ -61,23 +62,23 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
-        <ModeToggle darkMode={darkMode} setDarkMode={setMode} />
-        <Header />
-        <Menu
-            ref={menu}
-            fromTop={fromTop}
-            projectsOffset={getOffset(projects)}
-            infoOffset={getOffset(info)}
-            contactOffset={getOffset(contact)}
-            activeSection={activeSection}
-        />
-        <Projects
-            ref={projects}
-            menuFixed={fromTop === 100}
-            menuHeight={menu && menu.current ? menu.current.offsetHeight : 0}
-        />
-        <Info ref={info} />
-        <Contact ref={contact} />
+      <ModeToggle darkMode={darkMode} setDarkMode={setMode} />
+      <Header />
+      <Menu
+        ref={menu}
+        fromTop={fromTop}
+        projectsOffset={getOffset(projects)}
+        infoOffset={getOffset(info)}
+        contactOffset={getOffset(contact)}
+        activeSection={activeSection}
+      />
+      <Projects
+        ref={projects}
+        menuFixed={fromTop === 100}
+        menuHeight={menu && menu.current ? menu.current.offsetHeight : 0}
+      />
+      <Info ref={info} />
+      <Contact ref={contact} />
     </ThemeProvider>
   )
 }

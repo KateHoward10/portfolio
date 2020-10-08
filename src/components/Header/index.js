@@ -1,11 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import {
-  Container,
-  TextContainer,
-  Image,
-  Intro
-} from "./styles"
+import { Container, TextContainer, Image, Intro } from "./styles"
 
 const Header = () => {
   const data = useStaticQuery(graphql`

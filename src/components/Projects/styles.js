@@ -53,7 +53,8 @@ export const FilterList = styled.ul`
 export const Filter = styled.li`
   cursor: pointer;
   padding: 4px;
-  background-color: ${props => props.selected ? "deepskyblue" : "transparent"};
+  background-color: ${props =>
+    props.selected ? "deepskyblue" : "transparent"};
   &:hover {
     background-color: deepskylue;
   }

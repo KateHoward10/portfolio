@@ -15,74 +15,93 @@ import {
 } from "./styles"
 import { FaCode, FaTimes, FaChevronUp, FaChevronDown } from "react-icons/fa"
 
-const Projects = React.forwardRef(
-  ({ menuFixed, menuHeight }, ref) => {
-    const [filters, setFilters] = useState([])
-    const [showFilters, toggleFilters] = useState(false)
-    const data = useStaticQuery(graphql`
-      query {
-        site {
-          siteMetadata {
-            projects {
-              name
-              link
-              url
-              tags
-            }
+const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
+  const [filters, setFilters] = useState([])
+  const [showFilters, toggleFilters] = useState(false)
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          projects {
+            name
+            link
+            url
+            tags
           }
         }
-        allFile(
-          sort: { order: ASC, fields: [absolutePath] }
-          filter: { relativePath: { regex: "/projects/.*.png/" } }
-        ) {
-          edges {
-            node {
-              relativePath
-              name
-              childImageSharp {
-                sizes(maxWidth: 240) {
-                  ...GatsbyImageSharpSizes
-                }
+      }
+      allFile(
+        sort: { order: ASC, fields: [absolutePath] }
+        filter: { relativePath: { regex: "/projects/.*.png/" } }
+      ) {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fluid(maxWidth: 240) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
         }
       }
-    `)
-    const projects = data.site.siteMetadata.projects
-    const projectImages = data.allFile.edges
-    const allTags = projects.map(project => project.tags)
-    const tags = [...new Set([].concat(...allTags))].sort()
-
-    function selectFilter(filter) {
-      toggleFilters(false);
-      setFilters(filters.indexOf(filter) > -1 ? filters.filter(f => f !== filter) : [...filters, filter]);
     }
+  `)
+  const projects = data.site.siteMetadata.projects
+  const projectImages = data.allFile.edges
+  const allTags = projects.map(project => project.tags)
+  const tags = [...new Set([].concat(...allTags))].sort()
 
-    return (
-      <Container
-        ref={ref}
-        menuFixed={menuFixed}
-        menuHeight={menuHeight}
-      >
-        <FilterContainer>
-          <FilterButton onClick={() => toggleFilters(!showFilters)}><span>Filter projects </span>{showFilters ? <FaChevronUp /> : <FaChevronDown />}</FilterButton>
-          {showFilters && (
-            <FilterList>
-              {tags.map((tag, index) => (
-                <Filter key={index} value={tag} selected={filters.indexOf(tag) > -1} onClick={() => selectFilter(tag)}>{tag}</Filter>
-              ))}
-            </FilterList>
-          )}
-          <TagContainer>
-            {filters.map((filter, index) => (
-              <Tag key={index}>{filter} <FaTimes onClick={() => setFilters(filters.filter(f => f !== filter))} style={{ paddingLeft: '2px' }} /></Tag>
+  function selectFilter(filter) {
+    toggleFilters(false)
+    setFilters(
+      filters.indexOf(filter) > -1
+        ? filters.filter(f => f !== filter)
+        : [...filters, filter]
+    )
+  }
+
+  return (
+    <Container ref={ref} menuFixed={menuFixed} menuHeight={menuHeight}>
+      <FilterContainer>
+        <FilterButton onClick={() => toggleFilters(!showFilters)}>
+          <span>Filter projects </span>
+          {showFilters ? <FaChevronUp /> : <FaChevronDown />}
+        </FilterButton>
+        {showFilters && (
+          <FilterList>
+            {tags.map((tag, index) => (
+              <Filter
+                key={index}
+                value={tag}
+                selected={filters.indexOf(tag) > -1}
+                onClick={() => selectFilter(tag)}
+              >
+                {tag}
+              </Filter>
             ))}
-          </TagContainer>
-        </FilterContainer>
-        {projects
-          .filter(project => !filters.length || project.tags.some(tag => filters.indexOf(tag) > -1))
-          .map((project, index) => {
+          </FilterList>
+        )}
+        <TagContainer>
+          {filters.map((filter, index) => (
+            <Tag key={index}>
+              {filter}{" "}
+              <FaTimes
+                onClick={() => setFilters(filters.filter(f => f !== filter))}
+                style={{ paddingLeft: "2px" }}
+              />
+            </Tag>
+          ))}
+        </TagContainer>
+      </FilterContainer>
+      {projects
+        .filter(
+          project =>
+            !filters.length ||
+            project.tags.some(tag => filters.indexOf(tag) > -1)
+        )
+        .map((project, index) => {
           const image = projectImages.find(
             item => item.node.name === project.link
           )
@@ -120,9 +139,8 @@ const Projects = React.forwardRef(
             </Box>
           )
         })}
-      </Container>
-    )
-  }
-)
+    </Container>
+  )
+})
 
 export default Projects
