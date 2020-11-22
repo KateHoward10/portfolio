@@ -33,6 +33,11 @@ module.exports = {
         tags: ["ReactJS", "Games"],
       },
       {
+        name: "Colour Sort",
+        link: "colour-sort",
+        tags: ["Vue.js", "Games"],
+      },
+      {
         name: "Hangman",
         link: "hangman",
         url: "https://vue-hangman.herokuapp.com",
