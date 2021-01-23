@@ -35,7 +35,7 @@ module.exports = {
       {
         name: "Colour Sort",
         link: "colour-sort",
-        tags: ["Vue.js", "Games"],
+        tags: ["Vue.js", "Games", "Audio"],
       },
       {
         name: "Hangman",

@@ -88,10 +88,10 @@ export const Link = styled.a`
 export const Image = styled(Img)`
   height: 50vw;
   object-fit: cover;
-  filter: brightness(90%);
+  filter: brightness(95%);
   ${Link}:hover & {
-    filter: brightness(100%);
-    transition: filter 1s;
+    filter: brightness(105%);
+    transition: filter 0.25s;
   }
   @media screen and (min-width: 500px) {
     height: 24vw;
