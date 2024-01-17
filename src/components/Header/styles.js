@@ -22,19 +22,15 @@ export const Container = styled.div`
 
 export const Image = styled(Img)`
   width: 60vw;
-  height: 60vw;
+  height: 75vw;
+  border-radius: 5px;
   object-fit: cover;
-  border-radius: 50%;
-  margin: 25px 0 0;
+  margin: 40px 0 0;
   @media screen and (min-width: 500px) {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 225px;
     float: left;
-    shape-outside: circle(110px);
     margin: 25px;
-  }
-  @media screen and (min-width: 700px) {
-    shape-outside: circle(120px);
   }
 `
 

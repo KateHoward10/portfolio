@@ -25,7 +25,6 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
           projects {
             name
             link
-            url
             tags
           }
         }
@@ -108,10 +107,7 @@ const Projects = React.forwardRef(({ menuFixed, menuHeight }, ref) => {
           return (
             <Box key={index}>
               <Link
-                href={
-                  project.url ||
-                  `https://katehoward10.github.io/${project.link}/`
-                }
+                href={`https://katehoward10.github.io/${project.link}/`}
                 target="_blank"
                 className="link"
               >

@@ -2,31 +2,33 @@ module.exports = {
   siteMetadata: {
     title: "Kate Howard",
     author: "Kate Howard",
-    intro:
-      "I am a front end developer based in Bristol, working mostly with React and React Native. I also have some experience with Ruby on Rails, and am very interested in Vue. This is where my personal projects live.",
+    intro: [
+      "I am a front end developer based in Bristol, working mostly with React and React Native.",
+      "Over the years I have also picked up a bit of Ruby on Rails, Python and SQL, and experimented with other frameworks such as Vue.",
+      "This is where my personal projects live."],
     projects: [
       {
         name: "Music Connections Quiz",
         link: "music-connections-quiz",
         tags: ["ReactJS", "TypeScript", "Quiz", "Audio"],
       },
-      {
-        name: "Briz Quiz List",
-        link: "brizquizlist",
-        url: "https://www.brizquizlist.co.uk",
-        tags: ["Ruby on Rails", "Google Maps"],
-      },
+      // {
+      //   name: "Briz Quiz List",
+      //   link: "brizquizlist",
+      //   url: "https://www.brizquizlist.co.uk",
+      //   tags: ["Ruby on Rails", "Google Maps"],
+      // },
       {
         name: "Countdown",
         link: "countdown",
         tags: ["ReactJS", "Games"],
       },
-      {
-        name: "Flags of the World",
-        link: "flags-of-the-world",
-        url: "https://flagsoftheworld.herokuapp.com",
-        tags: ["ReactJS", "Quiz", "Express", "WebSockets"],
-      },
+      // {
+      //   name: "Flags of the World",
+      //   link: "flags-of-the-world",
+      //   url: "https://flagsoftheworld.herokuapp.com",
+      //   tags: ["ReactJS", "Quiz", "Express", "WebSockets"],
+      // },
       {
         name: "Snek",
         link: "snek",
@@ -37,12 +39,12 @@ module.exports = {
         link: "colour-sort",
         tags: ["Vue.js", "Games", "Audio"],
       },
-      {
-        name: "Hangman",
-        link: "hangman",
-        url: "https://vue-hangman.herokuapp.com",
-        tags: ["Vue.js", "Express", "WebSockets", "Games"],
-      },
+      // {
+      //   name: "Hangman",
+      //   link: "hangman",
+      //   url: "https://vue-hangman.herokuapp.com",
+      //   tags: ["Vue.js", "Express", "WebSockets", "Games"],
+      // },
       {
         name: "Pairs",
         link: "pairs",

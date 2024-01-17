@@ -27,7 +27,7 @@ const Header = () => {
         <Image fluid={data.me.childImageSharp.fluid} alt="Me" />
         <Intro>
           <h1>{data.site.siteMetadata.author}</h1>
-          <p>{data.site.siteMetadata.intro}</p>
+          {data.site.siteMetadata.intro.map(i => <p>{i}</p>)}
         </Intro>
       </TextContainer>
     </Container>

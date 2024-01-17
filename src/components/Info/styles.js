@@ -44,6 +44,7 @@ export const IconContainer = styled.div`
 `
 
 export const Text = styled.span`
+  line-height: 1.5;
   flex: 1;
   margin-left: 10px;
   a {

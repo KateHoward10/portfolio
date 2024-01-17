@@ -26,8 +26,7 @@ const Info = React.forwardRef((props, ref) => (
           <FaLaptop color="red" />
         </IconContainer>
         <Text>
-          I currently work at <a className="link" href="https://simpleweb.co.uk/">Simpleweb</a>{" "}
-          in Bedminster.
+          I have worked most recently as a front end developer at <a className="link" href="https://www.outlookenergy.co.uk/">Outlook Energy</a>.
         </Text>
       </ListItem>
       <ListItem>
@@ -35,8 +34,7 @@ const Info = React.forwardRef((props, ref) => (
           <FaMusic color="green" />
         </IconContainer>
         <Text>
-          When not coding I enjoy lots of live music around Bristol, as well as
-          a bit of creative writing and quite a few pub quizzes.
+          When not coding I enjoy lots of live music around Bristol, as well as creative writing, pub quizzing, designing tattoos, customising clothes and hanging out with my cat, Elsie.
         </Text>
       </ListItem>
       <ListItem>
@@ -52,7 +50,7 @@ const Info = React.forwardRef((props, ref) => (
           <FaMicrophoneAlt color="dodgerblue" />
         </IconContainer>
         <Text>
-          From about Oct ’16 to Sept ’17 I used to read the news on{" "}
+          Back in 2017 I would regularly read the news on{" "}
           <a className="link" href="https://bcfmradio.com/">BCfm</a>
           ’s breakfast show.
         </Text>
@@ -62,8 +60,7 @@ const Info = React.forwardRef((props, ref) => (
           <FaBrain color="pink" />
         </IconContainer>
         <Text>
-          I have 1½ degrees in Psychology (the other ½ in Zoology) and am always
-          keen to learn more about UX.
+          I have 1½ degrees in Psychology (the other ½ in Zoology) and am interested in UX, accessibility and visual perception.
         </Text>
       </ListItem>
     </List>
