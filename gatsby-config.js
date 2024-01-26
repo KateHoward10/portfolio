@@ -23,12 +23,12 @@ module.exports = {
         link: "countdown",
         tags: ["ReactJS", "Games"],
       },
-      // {
-      //   name: "Flags of the World",
-      //   link: "flags-of-the-world",
-      //   url: "https://flagsoftheworld.herokuapp.com",
-      //   tags: ["ReactJS", "Quiz", "Express", "WebSockets"],
-      // },
+      {
+        name: "Hangman",
+        link: "hangman",
+        url: "https://vue-hangman.herokuapp.com",
+        tags: ["Vue.js", "Express", "WebSockets", "Games"],
+      },
       {
         name: "Snek",
         link: "snek",
@@ -39,12 +39,12 @@ module.exports = {
         link: "colour-sort",
         tags: ["Vue.js", "Games", "Audio"],
       },
-      // {
-      //   name: "Hangman",
-      //   link: "hangman",
-      //   url: "https://vue-hangman.herokuapp.com",
-      //   tags: ["Vue.js", "Express", "WebSockets", "Games"],
-      // },
+      {
+        name: "Flags of the World",
+        link: "flags-of-the-world",
+        url: "https://flagsoftheworld.herokuapp.com",
+        tags: ["ReactJS", "Quiz", "Express", "WebSockets"],
+      },
       {
         name: "Pairs",
         link: "pairs",
