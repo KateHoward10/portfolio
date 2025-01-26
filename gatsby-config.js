@@ -60,11 +60,11 @@ module.exports = {
         link: "games-with-lines",
         tags: ["ReactJS", "Games"],
       },
-      {
-        name: "Typing Speed Test",
-        link: "typing-speed-test",
-        tags: ["ReactJS", "TypeScript", "Games"],
-      },
+      // {
+      //   name: "Typing Speed Test",
+      //   link: "typing-speed-test",
+      //   tags: ["ReactJS", "TypeScript", "Games"],
+      // },
       {
         name: "Ukulele Tuner",
         link: "ukulele-tuner",
